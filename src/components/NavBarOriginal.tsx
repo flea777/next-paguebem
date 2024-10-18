@@ -9,7 +9,7 @@ import ButtonPrimary from './ButtonPrimary';
 import ButtonSecondary from './ButtonSecondary';
 import SocialLinks from './SocialLinks';
 
-export default function Navbar() {
+export default function NavbarOriginal() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLElement>(null);
 

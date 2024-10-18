@@ -1,5 +1,8 @@
 import type { Config } from "tailwindcss";
 
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +14,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        sans: ['League Spartan', ...fontFamily.sans],
       },
     },
   },
