@@ -1,36 +1,45 @@
-import { main } from "framer-motion/client";
-import PagueBemRecupera from "./PagueBemRecupera";
-import PagueBemConta from "./PagueBemConta";
-import PagueBemProtege from "./PagueBemProtege";
-import PagueBemLocalize from "./PagueBemLocalize";
-import PagueBemConversas from "./PagueBemConversas";
+import React from "react";
+import PagueBemCard from "./PagueBemCard";
+import Solutions from "./Solutions";
 
+const ProductsSection: React.FC = () => {
+    return(
+        <main className="flex max-w-5xl mx-auto flex flex-wrap justify-center gap-6 p-8">
+            <div>
+                <Solutions/>
+            </div>
 
-const ProductsSection = () => {
-    return (
-        <main>
-    <PagueBemRecupera
-    title="Pague Bem Recupera" 
-    description="A ferramenta certa para que as empresas possam resolver de forma prática e simples suas cobranças."/>
+            <div>
+                <PagueBemCard
+                title="Pague Bem Recupera"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
+            </div>
 
-    <PagueBemConta
-    title="Pague Bem Conta"
-    description="Agilize a vida do devedor com opções para pagamento da dívida via boleto, pix ou cartão de crédito no momento que ele receber a cobrança."/>
+            <div>
+                <PagueBemCard
+                title="Pague Bem Conta"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
+            </div>
 
-    <PagueBemProtege
-    title="Pague Bem Protege"
-    description="Rede colaborativa e gratuita para pesquisa, publicação e análise de crédito das empresas."/>
+            <div>
+                <PagueBemCard
+                title="Pague Bem Protege"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
+            </div>
 
-    <PagueBemLocalize 
-    title="Pague Bem Localize"
-    description="Agilize a vida do devedor com opções para pagamento da dívida via boleto, pix ou cartão de crédito no momento que ele receber a cobrança."/>
+            <div>
+                <PagueBemCard
+                title="Pague Bem Localize"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
+            </div>
 
-    <PagueBemConversas 
-    title="Pague Bem Conversas"
-    description="Converta seus clientes inadimplentes em pagantes através de estratégias de conversação diretamente da plataforma para o número do WhatsApp do seu cliente."/>
-    </main>
-
-);
+            <div>
+                <PagueBemCard
+                title="Pague Bem Conversas"
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
+            </div>  
+        </main>
+    )
 }
- 
-export default ProductsSection; 
+
+export default ProductsSection;
