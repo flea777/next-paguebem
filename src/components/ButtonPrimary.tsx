@@ -19,7 +19,7 @@ export default function ButtonPrimary({ text, onClick }: ButtonPrimaryProps) {
       }}
       animate={{ x: [0, 20, -20, 0] }} 
       onClick={onClick}
-      className="p-2 w-auto text-white font-bold bg-green-600 rounded-3xl border border-solid border-neutral-800 hover:bg-green-600 transform hover:scale-110 transition-all duration-300 ease-in-out"
+      className="px-4 py-2 text-white font-bold bg-[#01AB0D] rounded-3xl border-none hover:bg-green-600 transform hover:scale-110 transition-all duration-300 ease-in-out"
     >
       {text}
     </motion.button>

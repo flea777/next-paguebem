@@ -17,19 +17,19 @@ export default function InfoNavBar(){
 
 
         <div className="flex items-center justify-center">
-          <Link href="/quem-somos" className="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-bold">
+          <Link href="/quem-somos" className="text-white hover:text-green-600 px-3 py-2 text-sm font-bold">
             Quem somos
           </Link>
-          <Link href="/solucoes" className="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-bold">
+          <Link href="/solucoes" className="text-white hover:text-green-600 px-3 py-2 text-sm font-bold">
             Soluções
           </Link>
-          <Link href="/planos" className="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-bold">
+          <Link href="/planos" className="text-white hover:text-green-600 px-3 py-2 text-sm font-bold">
             Planos
           </Link>
-          <Link href="/contato" className="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-bold">
+          <Link href="/contato" className="text-white hover:text-green-600 px-3 py-2 text-sm font-bold">
             Contato
           </Link>
-          <Link href="/depoimentos" className="text-gray-900 hover:text-green-600 px-3 py-2 text-sm font-bold">
+          <Link href="/depoimentos" className="text-white hover:text-green-600 px-3 py-2 text-sm font-bold">
             Depoimentos
           </Link>
         </div>

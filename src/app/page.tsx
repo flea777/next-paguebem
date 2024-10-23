@@ -10,7 +10,7 @@ import ProductsSection from "@/components/ProductsSection";
 
 export default function Home() {
   return (
-    <main className="p-8 mt-10 rounded-md w-full h-screen mx-auto">
+    <main className="w-full h-screen mx-auto">
       {/* <PagueBem />
       <NossoImpacto /> */}
       {/* <PagueBem /> */}
