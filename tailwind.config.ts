@@ -14,9 +14,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        titleGray: "#4F4F4F",
+        textGray: "#40423F",
+        titleGreen: "#578F47",
+        buttonGreen: "#01AB0D",
+
       },
       fontFamily: {
-        sans: ['League Spartan', ...fontFamily.sans],
+        spartan: ['League Spartan', ...fontFamily.sans],
+        inter: ['Inter', ...fontFamily.sans],
       },
     },
   },

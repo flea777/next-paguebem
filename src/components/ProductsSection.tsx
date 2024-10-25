@@ -2,7 +2,7 @@ import React from "react";
 import PagueBemCard from "./PagueBemCard";
 import Solutions from "./Solutions";
 
-const ProductsSection: React.FC = () => {
+const ProductsSection = () => {
     return(
         <main className="flex max-w-5xl mx-auto flex flex-wrap justify-center gap-6 p-8">
             <div>
