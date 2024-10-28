@@ -28,7 +28,7 @@ const Solutions: React.FC = () => {
       <h2 className="font-spartan text-6xl font-bold text-titleGreen">
         Soluções integradas que geram resultados.
       </h2>
-      <p className="font-inter text-lg font-regular text-sm text-textGray">
+      <p className="font-inter text-lg font-regular text-textGray">
         Revolucione a gestão financeira da sua empresa com as soluções integradas da Pague Bem Brasil. Com nosso sistema automatizado, você poderá:
       </p>
       
