@@ -9,15 +9,15 @@ interface Feature {
 const features: Feature[] = [
   {
     id: 1,
-    text: 'Recuperar valores de maneira prática e simples',
+    text: 'Recupere valores de forma simples',
   },
   {
     id: 2,
-    text: 'Oferecer opções flexíveis de pagamento aos clientes',
+    text: 'Ofereça opções flexíveis de pagamento',
   },
   {
     id: 3,
-    text: 'Proteger sua empresa com uma análise colaborativa de crédito',
+    text: 'Proteja-se com análise colaborativa de crédito',
   },
 ];
 
@@ -29,13 +29,13 @@ const Solutions: React.FC = () => {
         Soluções integradas que geram resultados.
       </h2>
       <p className="font-inter text-lg font-regular text-textGray">
-        Revolucione a gestão financeira da sua empresa com as soluções integradas da Pague Bem Brasil. Com nosso sistema automatizado, você poderá:
+        Revolucione sua gestão financeira com a Pague Bem Brasil:
       </p>
       
       <ul className="list-disc pl-6">
         {features.map((feature) => (
           <li key={feature.id} className="mb-3">
-            <p className="font-inter text-lg font-medium text-sm text-textGray">
+            <p className="font-inter text-lg font-regular text-sm text-textGray">
               {feature.text}
             </p>
           </li>
@@ -46,7 +46,7 @@ const Solutions: React.FC = () => {
         Entre em contato hoje mesmo e descubra como a Pague Bem Brasil pode transformar sua gestão financeira, sem complicações.
       </p>
       
-      <button className="mt-4 bg-buttonGreen text-white py-2 px-4 rounded-2xl hover:bg-green-700">
+      <button className="justify-start max-w-72 mt-4 bg-buttonGreen text-white py-2 px-4 rounded-2xl hover:bg-green-700">
         Zerar Inadimplência
       </button>
     </div>

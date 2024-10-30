@@ -18,6 +18,7 @@ const config: Config = {
         textGray: "#40423F",
         titleGreen: "#578F47",
         buttonGreen: "#01AB0D",
+        rectangleGreen: "#EDF5EC"
 
       },
       fontFamily: {
