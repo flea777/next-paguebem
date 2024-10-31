@@ -11,15 +11,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        custom: "4px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         titleGray: "#4F4F4F",
         textGray: "#40423F",
         titleGreen: "#578F47",
+        testimonialTitleGreen: "#367C2F",
+        nameTitleGreen: "#01AB0D",
         buttonGreen: "#01AB0D",
-        rectangleGreen: "#EDF5EC"
-
+        rectangleGreen: "#EDF5EC",
+        backgroundGray: "#F6FAF5",
+        paragraphBlack: "#1E1E1E"
       },
       fontFamily: {
         spartan: ['League Spartan', ...fontFamily.sans],
