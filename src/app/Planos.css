@@ -1,4 +1,4 @@
-/* Estilo para centralizar o título */
+
 .title {
   color: green;
   font-weight: bold;
@@ -7,7 +7,7 @@
   font-size: 1.8rem;
 }
 
-/* Container para alinhar os cards lado a lado */
+
 .plansContainer {
   display: flex;
   justify-content: center;
@@ -15,30 +15,30 @@
   gap: 30px;
 }
 
-/* Container do card, com flex para botões e card */
+
 .cardWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px; /* Aumenta a largura */
+  width: 500px; 
 }
 
-/* Estilo do card */
+
 .card {
   width: 100%;
-  min-height: 600px !important; /* Define altura mínima do card */
+  min-height: 600px !important; 
   border-radius: 15px;
   padding: 30px;
   border: 1px solid #ddd;
   text-align: left;
   background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Estilo do cabeçalho com fundo verde escuro para planos pagos */
+
 .cardHeader.paid {
-  background-color: #004d00; /* Fundo verde escuro */
-  color: white; /* Cor do texto em branco */
+  background-color: #004d00; 
+  color: white; 
 }
 
 /* Estilo do cabeçalho */
@@ -47,10 +47,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  border-radius: 10px 10px 0 0; /* Borda arredondada na parte superior */
+  border-radius: 10px 10px 0 0; 
 }
 
-/* Centraliza o preço e "Por mês" */
+
 .priceSection {
   text-align: right;
 }
@@ -70,20 +70,20 @@
   margin-top: 4px;
 }
 
-/* Divisor */
+
 .divider {
   border-top: 1px solid #ddd;
   margin: 20px 0;
 }
 
-/* Títulos das seções */
+
 .sectionTitle {
   color: green;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* Estilos para a seção Meios de Pagamento */
+
 .paymentTitle {
   text-align: center;
   font-weight: bold;
@@ -112,13 +112,13 @@
   font-weight: bold;
 }
 
-/* Informações de pagamento */
+
 .paymentInfo {
   display: flex;
   flex-direction: column;
 }
 
-/* Botões de navegação */
+
 .navButton {
   cursor: pointer;
   font-size: 1.5rem;
@@ -128,35 +128,47 @@
   margin: 10px 0;
 }
 
-/* Cor do preço para planos pagos */
+
 .paidPrice {
   color: #FFD700;
   font-weight: bold;
 }
 
-/* Container para centralizar o botão */
+
 .buttonWrapper {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-/* Estilo do botão de mais informações */
+
 .popupButton {
-  background-color: #28a745; /* Fundo verde */
-  color: white; /* Texto em branco */
+  background-color: #28a745; 
+  color: white; 
   border: none;
   border-radius: 5px;
-  padding: 10px 20px; /* Espaçamento interno */
+  padding: 10px 20px; 
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s ease; /* Efeito de transição */
+  transition: background-color 0.3s ease;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
+.infoButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+
 .popupButton:hover {
-  background-color: #218838; /* Verde mais escuro */
+  background-color: #218838;
 }
 
 .popup {

@@ -5,7 +5,7 @@ import PagueBem from "@/components/PagueBem";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProductsSection from "@/components/ProductsSection";
-
+import Planos from "@/components/Planos";
 
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
       <HeroSection/>
       <div />
       <ProductsSection/>
+      <Planos/>
     </main>
   );
 }
