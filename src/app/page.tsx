@@ -5,6 +5,7 @@ import PagueBem from "@/components/PagueBem";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProductsSection from "@/components/ProductsSection";
+import FormSection from "@/components/FormSection";
 
 
 
@@ -17,6 +18,7 @@ export default function Home() {
       <HeroSection/>
       <div />
       <ProductsSection/>
+      <FormSection />
     </main>
   );
 }
