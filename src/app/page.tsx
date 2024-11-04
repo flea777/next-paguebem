@@ -10,8 +10,8 @@ export default function Home() {
     <main className="w-full h-screen mx-auto">
       <HeroSection/>
       <div />
-      <TestimonialSection/>
       <ProductsSection/>
+      <TestimonialSection/>
       <FormSection />
     </main>
   );
