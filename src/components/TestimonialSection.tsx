@@ -68,10 +68,10 @@ const TestimonialSection = () => {
     if(!testimony) return;
 
     return ( 
-    <section className="flex flex-col bg-backgroundGray w-full items-center pt-12">
+    <section className="flex flex-col bg-backgroundGray w-full items-center pt-12 gap-12">
         <h1 className="font-spartan text-5xl font-bold text-testimonialTitleGreen">O que nossos clientes andam falando?</h1>
-            <div className="flex flex-row max-w-7xl bg-red-200 gap-12">
-                <div className="flex flex-col items-center bg-blue-300 w-1/3">
+            <div className="flex flex-row max-w-7xl">
+                <div className="flex flex-col items-center w-1/3 justify-center bg-blue-200">
                     <Image className="rounded-full shadow-custom" 
                     src={testimony.imgUrl} 
                     alt={testimony.name} 
@@ -81,10 +81,20 @@ const TestimonialSection = () => {
                     <p className="font-inter text-lg text-paragraphBlack mx-11">{testimony.company}</p>
                 </div>
 
-                <div className="flex w-2/3 mx-4 bg-green-300">
-                    <p className="font-inter text-2xl text-paragraphBlack mt-11">{testimony.text}</p>
+                <div className="flex flex-col w-2/3 mx-4 bg-red-100 gap-12   pb-10">
+                    <p className="font-inter text-2xl leading-10 text-paragraphBlack mt-11">{testimony.text}</p>
+                    <div className="flex flex-row gap-6">
+                        <div className="flex w-24 h-16 bg-white rounded-2xl border border-borderGreen border-solid shadow-[4px_4px_4px_rgba(0,0,0,0.25)]"></div>
+                        <div className="flex w-24 h-16 bg-white rounded-2xl border border-borderGray border-solid shadow-[4px_4px_4px_rgba(0,0,0,0.25)]"></div>
+                        <div className="flex w-24 h-16 bg-white rounded-2xl border border-borderGray border-solid shadow-[4px_4px_4px_rgba(0,0,0,0.25)]"></div>
+                        <div className="flex w-24 h-16 bg-white rounded-2xl border border-borderGray border-solid shadow-[4px_4px_4px_rgba(0,0,0,0.25)]"></div>
+                        <div className="flex w-24 h-16 bg-white rounded-2xl border border-borderGray border-solid shadow-[4px_4px_4px_rgba(0,0,0,0.25)]"></div>
+                        <div className="flex w-24 h-16 bg-white rounded-2xl border border-borderGray border-solid shadow-[4px_4px_4px_rgba(0,0,0,0.25)]"></div>
+                        <div className="flex w-24 h-16 bg-white rounded-2xl border border-borderGray border-solid shadow-[4px_4px_4px_rgba(0,0,0,0.25)]"></div>
+                    </div>
                 </div>
-            </div>    
+            </div>
+            
     </section> 
         );
 }

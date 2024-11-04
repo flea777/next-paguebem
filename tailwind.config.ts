@@ -25,7 +25,9 @@ const config: Config = {
         buttonGreen: "#01AB0D",
         rectangleGreen: "#EDF5EC",
         backgroundGray: "#F6FAF5",
-        paragraphBlack: "#1E1E1E"
+        paragraphBlack: "#1E1E1E",
+        borderGreen: "#01AB0D",
+        borderGray: "#C9C9C9",
       },
       fontFamily: {
         spartan: ['League Spartan', ...fontFamily.sans],
