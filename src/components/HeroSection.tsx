@@ -46,7 +46,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
               >
-                <ButtonPrimary text="FALAR COM CONSULTOR" />
+                <ButtonPrimary text="FALAR COM CONSULTOR" href="/consultores"/>
                 <ButtonSecondary text="CONHECER OS PLANOS" />
               </motion.div>
 
