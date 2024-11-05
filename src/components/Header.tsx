@@ -7,6 +7,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import ButtonPrimary from './ButtonPrimary';
 import ButtonSecondary from './ButtonSecondary';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center">
-          {isScrolled ? <img src="./1. Logo_Principal_Horizontal_Pague_Bem_Brasil.png" alt='' width={150} height={150}/> : <Logo />} {/* Alternar logo */}
+          {isScrolled ? <Image src="/logo_principal_horizontal.png" alt='' width={150} height={150}/> : <Logo />} 
         </div>
 
         <div className="hidden lg:flex items-center space-x-6 ml-10">

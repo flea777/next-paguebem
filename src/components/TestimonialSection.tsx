@@ -84,7 +84,6 @@ export default function TestimonialsCarousel() {
         <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-12 bg-backgroundGray items-center">
             <h2 className="flex font-spartan text-5xl font-bold text-testimonialTitleGreen">O que nossos clientes andam falando?</h2>
 
-            {/* min-h */}
             <div className="relative overflow-hidden">
                 
                 <AnimatePresence mode="wait">
