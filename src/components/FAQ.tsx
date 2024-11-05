@@ -4,6 +4,7 @@ import React from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Button, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; 
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline'; 
+import Image from 'next/image';
 
 const FAQPage: React.FC = () => {
   return (
@@ -11,9 +12,9 @@ const FAQPage: React.FC = () => {
       {/* Lado Esquerdo */}
       <div style={{ width: '30%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
         {/* Seção FAQ */}
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', backgroundColor: '#F0F0F0', borderRadius: '20px', padding: '12px' }}>
-            <ChatBubbleOutlineIcon style={{ marginRight: '8px', color: '#4caf50', fontSize: '24px' }} />
-            <Typography variant="h5" style={{ fontWeight: 'bold', color: '#367C2F', fontSize: '13px' }}>FAQ</Typography>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', backgroundColor: '#F0F0F0', borderRadius: '20px', padding: '12px', gap: '10px'}}>
+          <Image src="/simbol_pbb.png" alt='Simbolo Pague Bem Brasil' width={15} height={15}/>
+          <Typography variant="h5" style={{ fontWeight: 'bold', color: '#367C2F', fontSize: '13px' }}>FAQ</Typography>
         </div>
 
         {/* Título principal */}
@@ -31,6 +32,11 @@ const FAQPage: React.FC = () => {
         >
           FALE CONOSCO
         </Button>
+
+        {/* Nova div para a imagem */}
+        <div style={{ marginTop: '100px', marginLeft: -46, marginBottom: -46}}>
+          <Image src="/Grafismo_verde_bandeira.png" alt="Imagem decorativa" width={200} height={100} />
+        </div>
       </div>
 
       {/* Lado Direito */}
