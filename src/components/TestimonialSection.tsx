@@ -75,7 +75,7 @@ export default function TestimonialsCarousel() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleDotClick = (index:any) => {
+  const handleDotClick = (index: number) => {
     setCurrentIndex(index);
   };
 
