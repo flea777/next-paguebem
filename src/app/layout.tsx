@@ -1,8 +1,6 @@
-// import Navbar from '@/components/NavBarOriginal';
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-// import Navbar from "@/components/NavBar";
 import Header from '@/components/Header';
 import SocialMedia from "@/components/SocialMedia";
 
