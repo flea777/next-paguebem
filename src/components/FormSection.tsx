@@ -10,83 +10,84 @@ const FormSection: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col bg-[#F6FAF5] px-4 sm:px-6 lg:px-8">
-      <div
-        style={{
-          backgroundImage: 'linear-gradient(107.53deg, #2D4416 23.45%, #39670B 97.14%, #5D8D2E 104.87%, #71AA37 104.87%)',
-          height: '200px'
-        }}
-        className="flex py-8 sm:py-12 justify-center"
-      >
+    <section className="flex flex-col bg-backgroungGray px-4 sm:px-6 lg:px-8 z-">
+      
+      <div        style={{
+          backgroundImage: 'greenLinearGradient',          height: '200px'
+        }}>
+
+
         <div className="flex flex-col w-full max-w-screen-xl text-center">
           <h2 className="text-[32px] sm:text-[40px] lg:text-[60px] font-spartan font-bold leading-tight text-white">
             Fale com nossos consultores
           </h2>
+
           <p className="text-[18px] sm:text-[22px] lg:text-[26px] font-inter font-normal leading-tight text-white">
             Converse conosco e tire suas dúvidas
           </p>
         </div>
+
       </div>
 
-      <div className="flex justify-center bg-[#F6FAF5] p-6 sm:p-12 lg:p-20">
+      <div className="flex justify-center bg-backgroundGraydGray p-6 sm:p-12 lg:p-20">
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-[936px]" onSubmit={handleSubmit}>
           <div>
-            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-gray-700 pl-3">
+            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-titleGray pl-3">
               Nome
             </label>
             <input
               type="text"
               name="nome"
-              className="mt-1 p-2 block w-full border rounded-2xl pl-5"
+              className="mt-1 p-2 block w-full border rounded-2xl pl-5 text-bord"
               placeholder="Digite o seu nome"
               required
             />
           </div>
 
           <div>
-            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-gray-700 pl-3">
+            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-titleGray pl-3">
               Empresa
             </label>
             <input
               type="text"
               name="empresa"
-              className="mt-1 p-2 block w-full border rounded-2xl pl-5"
+              className="mt-1 p-2 block w-full border rounded-2xl pl-5 text-bord"
               placeholder="Digite o nome da sua empresa"
               required
             />
           </div>
 
           <div>
-            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-gray-700 pl-3">
+            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-titleGray pl-3">
               E-mail corporativo
             </label>
             <input
               type="email"
               name="email"
-              className="mt-1 p-2 block w-full border rounded-2xl pl-5"
+              className="mt-1 p-2 block w-full border rounded-2xl pl-5 text-bord"
               placeholder="Digite o seu e-mail corporativo"
               required
             />
           </div>
 
           <div>
-            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-gray-700 pl-3">
+            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-titleGray pl-3">
               Celular
             </label>
             <input
               type="text"
               name="celular"
-              className="mt-1 p-2 block w-full border rounded-2xl pl-5"
+              className="mt-1 p-2 block w-full border rounded-2xl pl-5 text-bord"
               placeholder="Digite o seu número de celular"
               required
             />
           </div>
 
           <div>
-            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-gray-700 pl-3">
+            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-titleGray pl-3">
               Plano
             </label>
-            <select name="plano" className="mt-1 pl-5 p-2 block w-full border rounded-2xl bg-white">
+            <select name="plano" className="mt-1 pl-5 text-bord p-2 block w-full border rounded-2xl bg-white">
               <option value="">Selecionar um plano</option>
               <option value="plano1">Starter</option>
               <option value="plano2">Business</option>
@@ -96,25 +97,25 @@ const FormSection: React.FC = () => {
           </div>
 
           <div>
-            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-gray-700 pl-3">
+            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-titleGray pl-3">
               Segmento
             </label>
             <input
               type="text"
               name="segmento"
-              className="mt-1 p-2 block w-full border rounded-2xl pl-5"
+              className="mt-1 p-2 block w-full border rounded-2xl pl-5 text-bord"
               placeholder="Digite o segmento da empresa"
               required
             />
           </div>
 
           <div className="col-span-1 md:col-span-2">
-            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-gray-700 pl-3">
+            <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-titleGray pl-3">
               Mensagem
             </label>
             <textarea
               name="mensagem"
-              className="mt-1 p-2 block w-full border rounded-2xl pl-5"
+              className="mt-1 p-2 block w-full border rounded-2xl pl-5 text-bord"
               placeholder="Digite uma mensagem"
               rows={4}
               required
