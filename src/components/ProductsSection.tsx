@@ -2,11 +2,11 @@ import React from "react";
 import PagueBemCard from "./PagueBemCard";
 import Solutions from "./Solutions";
 
-const iconRecupera = './icon_pague_bem_recupera.png';
-const iconConta = './icon_pague_bem_conta.png';
-const iconProtege = './icon_pague_bem_protege.png';
-const iconLocalize = './icon_pague_bem_localize.png'
-const iconConversas = './icon_pague_bem_conversas.png';
+const iconRecupera = '/icon_pague_bem_recupera.png';
+const iconConta = '/icon_pague_bem_conta.png';
+const iconProtege = '/icon_pague_bem_protege.png';
+const iconLocalize = '/icon_pague_bem_localize.png'
+const iconConversas = '/icon_pague_bem_conversas.png';
 
 const ProductsSection = () => {
     return(
