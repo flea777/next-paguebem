@@ -113,8 +113,8 @@ export default function TestimonialsCarousel() {
                                     <button
                                     key={index}
                                     onClick={() => handleDotClick(index)}
-                                    className={`flex w-24 h-16 rounded-2xl border border-borderGreen transition-colors duration-300 ${
-                                        index === currentIndex ? 'bg-green-600' : 'bg-white'
+                                    className={`flex w-24 h-16 rounded-2xl border bg-white transition-colors duration-300 ${
+                                        index === currentIndex ? 'border-borderGreen' : 'border-borderGray'
                                     }`}
                                     aria-label={`Go to testimonial ${index + 1}`}
                                     />
