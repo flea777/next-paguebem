@@ -38,7 +38,7 @@ export default function Carousel() {
         className="flex space-x-4 max-w-7xl"
         initial={{ x: 0 }}
         animate={{ x: isPaused ? 0 : "-100%" }}
-        transition={{ ease: "linear", duration: 20, repeat: Infinity, repeatType: "loop" }}
+        transition={{ ease: "linear", duration: 25, repeat: Infinity, repeatType: "loop" }}
         whileHover={{ scale: 1.1 }}
         >
         {companies.map((company) => (
@@ -61,7 +61,7 @@ export default function Carousel() {
         ))}
       </motion.div>
       <div className="flex items-center font-inter w-72 h-14">
-      <ButtonPrimary text="FALAR COM CONSULTOR" />
+      <ButtonPrimary text="FALAR COM CONSULTOR" href="/consultores"/>
       </div>
     </main>
   );
