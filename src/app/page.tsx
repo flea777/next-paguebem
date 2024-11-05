@@ -2,7 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import ProductsSection from "@/components/ProductsSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import FormSection from "@/components/FormSection";
-import Carrossel from "@/components/Carrossel";
+import Carousel from "@/components/Carousel";
 
 
 
@@ -11,7 +11,7 @@ export default function Home() {
     <main className="w-full h-screen mx-auto">
       <HeroSection/>
       <div />
-      <Carrossel />
+      <Carousel />
       <ProductsSection/>
       <TestimonialSection/>
       <FormSection />
