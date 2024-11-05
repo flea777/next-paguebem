@@ -8,10 +8,7 @@ export default function Home() {
       <p className="text-gray-600 mb-6">
         Lorem ipsum, dolor sit amet consectetur adipiscing elit. Optio distinctio deserunt qui officiis. Explicabo, velit?
       </p>
-      {/* <button className="bg-gray-800 text-white py-2 px-4 rounded-full hover:bg-gray-700">
-        Button
-      </button> */}
-      <ButtonPrimary text="Criar conta" />
+      <ButtonPrimary text="Criar conta" href=""/>
     </div>
   );
 }
