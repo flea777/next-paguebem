@@ -14,6 +14,9 @@ const config: Config = {
       boxShadow: {
         custom: "4px 4px 4px 0px rgba(0, 0, 0, 0.25)",
       },
+      backgroundImage: {
+        'green-linear-gradient': 'linear-gradient(107.53deg, #2D4416 23.45%, #39670B 97.14%, #5D8D2E 104.87%, #71AA37 104.87%)',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -28,6 +31,7 @@ const config: Config = {
         paragraphBlack: "#1E1E1E",
         borderGreen: "#01AB0D",
         borderGray: "#C9C9C9",
+        socialIconGreen: "#2D4416",
       },
       fontFamily: {
         spartan: ['League Spartan', ...fontFamily.sans],
