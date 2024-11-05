@@ -10,21 +10,21 @@ export default function SocialMedia() {
       <ul className="flex flex-col items-center space-y-3">
         <li>
           <Link href="https://instagram.com" target="_blank" aria-label="Instagram">
-            <span className="bg-[#FEB700] rounded-full p-1 sm:p-2 lg:p-3 flex items-center justify-center text-white hover:bg-green-600 transform hover:scale-110 transition-all duration-300 ease-in-out">
+            <span className="bg-[#2D4416] rounded-full p-1 sm:p-2 lg:p-3 flex items-center justify-center text-white hover:bg-green-600 transform hover:scale-110 transition-all duration-300 ease-in-out">
               <FaInstagram className="text-sm sm:text-md lg:text-lg" />
             </span>
           </Link>
         </li>
         <li>
           <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-            <span className="bg-[#FEB700] rounded-full p-1 sm:p-2 lg:p-3 flex items-center justify-center text-white hover:bg-green-600 transform hover:scale-110 transition-all duration-300 ease-in-out">
+            <span className="bg-[#2D4416] rounded-full p-1 sm:p-2 lg:p-3 flex items-center justify-center text-white hover:bg-green-600 transform hover:scale-110 transition-all duration-300 ease-in-out">
               <FaLinkedinIn className="text-sm sm:text-md lg:text-lg" />
             </span>
           </Link>
         </li>
         <li>
           <Link href="https://whatsapp.com" target="_blank" aria-label="WhatsApp">
-            <span className="bg-[#FEB700] rounded-full p-1 sm:p-2 lg:p-3 flex items-center justify-center text-white hover:bg-green-600 transform hover:scale-110 transition-all duration-300 ease-in-out">
+            <span className="bg-[#2D4416] rounded-full p-1 sm:p-2 lg:p-3 flex items-center justify-center text-white hover:bg-green-600 transform hover:scale-110 transition-all duration-300 ease-in-out">
               <FaWhatsapp className="text-sm sm:text-md lg:text-lg" />
             </span>
           </Link>
