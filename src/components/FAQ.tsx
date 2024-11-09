@@ -83,7 +83,7 @@ const FAQPage: React.FC = () => {
       <div style={{ 
         marginLeft: '-46px', 
         marginBottom: '-46px', 
-        marginTop: '15px', 
+        marginTop: '0px', 
         width: '100%',  
         order: 3,
       }}>
