@@ -149,7 +149,8 @@ const Planos: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Planos para todas as empresas</h1>
+      <h1 className="text-3xl font-bold text-center mb-8 text-darkGreen">Planos para todas as empresas</h1>
+      
       <div className="flex justify-between gap-8">
         {[indexLeft, indexRight].map((index, i) => (
           <div key={i} className="flex-1 bg-white shadow-lg rounded-lg p-6">
