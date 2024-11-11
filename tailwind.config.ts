@@ -31,7 +31,9 @@ const config: Config = {
         paragraphBlack: "#1E1E1E",
         borderGreen: "#01AB0D",
         borderGray: "#C9C9C9",
-        socialIconGreen: "#2D4416",
+        socialBackgroundGreen: "#2D4416",
+        socialIconGreen: "#367C2F",
+        backgroundWhite: "#FAFAFA",
       },
       fontFamily: {
         spartan: ['League Spartan', ...fontFamily.sans],
