@@ -1,12 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --darkGreen: #006400;
+  --buttonGreen: #32a852;
+  --goldenYellow: #ffc700;
 }
 
 * {
@@ -26,9 +30,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  display: flex; 
-  flex-direction: column; 
-  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
@@ -39,4 +43,16 @@ main {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.pricing-card__payment-method {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pricing-card__payment-method--credit {
+  display: inline-block;
+  text-align: left;
+  margin-left: 0; 
 }

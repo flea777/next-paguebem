@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import '../app/planos.css';
 
 const Planos: React.FC = () => {
   const [indexLeft, setIndexLeft] = useState(0);
@@ -149,78 +148,101 @@ const Planos: React.FC = () => {
   const handleClosePopup = () => setPopupPlano(null);
 
   return (
-    <div className="container">
-      <h1 className="title">Planos para todas as empresas</h1>
-      <div className="plansContainer">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-center mb-8">Planos para todas as empresas</h1>
+      <div className="flex justify-between gap-8">
         {[indexLeft, indexRight].map((index, i) => (
-          <div key={i} className="cardWrapper">
-            <div className="buttonContainer">
-              <button className="navButton" onClick={i === 0 ? handlePreviousLeft : handlePreviousRight}>←</button>
-              <button className="navButton" onClick={i === 0 ? handleNextLeft : handleNextRight}>→</button>
+          <div key={i} className="flex-1 bg-white shadow-lg rounded-lg p-6">
+            <div className="flex justify-between items-center mb-4">
+              <button className="bg-gray-200 p-2 rounded-full" onClick={i === 0 ? handlePreviousLeft : handlePreviousRight}>←</button>
+              <button className="bg-gray-200 p-2 rounded-full" onClick={i === 0 ? handleNextLeft : handleNextRight}>→</button>
             </div>
-            <div className="card">
-              <div className={`cardHeader ${planosVariacoes[index]?.nome !== 'Free' ? 'paid' : ''}`}>
-                <h2 className="planName">{planosVariacoes[index]?.nome}</h2>
-                <div className="priceSection">
-                  <p className={`price ${planosVariacoes[index]?.nome !== 'Free' ? 'paidPrice' : 'value'}`}>
-                    {planosVariacoes[index]?.preco}
-                  </p>
-                  <p className="pricePer">Por mês</p>
+
+            <div className={`flex items-center justify-between ${planosVariacoes[index]?.nome === 'Free' ? 'bg-white' : 'bg-darkGreen'} p-6 rounded-t-lg`}>
+              <h2 className={`text-2xl font-semibold ${planosVariacoes[index]?.nome === 'Free' ? 'text-black' : 'text-white'}`}>
+                {planosVariacoes[index]?.nome}
+              </h2>
+              <div className="text-right">
+                <p className={`text-xl font-bold ${planosVariacoes[index]?.nome === 'Free' ? 'text-black' : 'text-goldenYellow'}`}>
+                  {planosVariacoes[index]?.preco}
+                </p>
+                <p className={`text-sm ${planosVariacoes[index]?.nome === 'Free' ? 'text-black' : 'text-white'}`}>Por mês</p>
+              </div>
+            </div>
+
+            <div className="border-t border-gray-300 my-4"></div>
+
+            <div className="text-black p-6">
+              <h4 className="text-lg font-semibold text-center">Meios de pagamento</h4>
+              <div className="flex justify-between">
+                <p className="text-sm"><strong>Boleto:</strong> {planosVariacoes[index]?.meiosPagamento?.boleto}</p>
+                <div className="flex flex-col items-end">
+                  <p className="text-sm"><strong>Crédito à vista:</strong> {planosVariacoes[index]?.meiosPagamento?.creditoAVista}</p>
+                  <p className="text-sm"><strong>Crédito parcelado:</strong> {planosVariacoes[index]?.meiosPagamento?.creditoParcelado}</p>
                 </div>
               </div>
-              <div className="divider" />
+            </div>
 
-              <h4 className="paymentTitle">Meios de pagamento</h4>
-              <div className="paymentInfoContainer">
-                <div className="paymentLeft">
-                  <p className="paymentItem"><strong>Boleto:</strong> <span className="value">{planosVariacoes[index]?.meiosPagamento?.boleto}</span></p>
-                </div>
-                <div className="paymentRight">
-                  <p className="paymentItem"><strong>Crédito à vista:</strong> <span className="value">{planosVariacoes[index]?.meiosPagamento?.creditoAVista}</span></p>
-                  <p className="paymentItem"><strong>Crédito parcelado:</strong> <span className="value">{planosVariacoes[index]?.meiosPagamento?.creditoParcelado}</span></p>
-                </div>
-              </div>
+            {planosVariacoes[index]?.nome !== 'Free' && (
+              <div className="border-t border-gray-300 my-4"></div>
+            )}
 
-              <div className="divider" />
-              
-              {planosVariacoes[index]?.nome === 'Free' && (
-                <div>
-                  <h4 className="sectionTitle">Benefícios do plano Free</h4>
-                  <ul className="benefitsList">
-                    {planosVariacoes[index]?.beneficios?.map((beneficio: string, idx: number) => (
-                      <li key={idx}>{beneficio}</li>
-                    ))}
+            {planosVariacoes[index]?.nome === 'Free' && (
+              <>
+                <div className="border-t border-gray-300 my-4"></div>
+
+                <div className="mt-4">
+                  <h4 className="text-lg font-semibold text-center">Benefícios do plano Free</h4>
+                  <ul className="list-disc ml-6 text-sm">
+                    <li>
+                      <span className="font-bold">WhatsApp:</span> R$0,20 por notificação (pré-pago)
+                    </li>
+                    <li>
+                      <span className="font-bold">Robô de Voz:</span> R$0,75 por ligação (pré-pago)
+                    </li>
+                    <li>
+                      <span className="font-bold">Régua de Cobrança</span> (apenas E-mail)
+                    </li>
+                    <li>
+                      Cobrança de vencidos em até <span className="font-bold">30 dias</span>
+                    </li>
+                    <li>
+                      <span className="font-bold">1 (um)</span> usuário e <span className="font-bold">1 (um)</span> CNPJ
+                    </li>
+                    <li>
+                      <span className="font-bold">6 notificações</span> gratuitas de cobranças via E-mail (por boleto/pix vencido)
+                    </li>
                   </ul>
                 </div>
-              )}
+              </>
+            )}
 
-              {planosVariacoes[index]?.canaisDeComunicacao && planosVariacoes[index]?.nome !== 'Free' && (
-                <div>
-                  <h4 className="sectionTitle">Canais de Comunicação</h4>
-                  <div className="communicationInfo">
-                    <p><strong>Franquia de:</strong> <span className="value">{planosVariacoes[index]?.canaisDeComunicacao?.franquia}</span></p>
-                    <p><strong>Franquia alternativa:</strong> <span className="value">{planosVariacoes[index]?.canaisDeComunicacao?.franquiaAlternativa}</span></p>
-                    <p><strong>Robô de voz:</strong> <span className="value">{planosVariacoes[index]?.canaisDeComunicacao?.roboDeVoz}</span></p>
-                  </div>
+            {planosVariacoes[index]?.canaisDeComunicacao && planosVariacoes[index]?.nome !== 'Free' && (
+              <div className="mt-4">
+                <h4 className="text-lg font-semibold text-center">Canais de Comunicação</h4>
+                <div className="text-sm">
+                  <p><strong>Franquia de:</strong> {planosVariacoes[index]?.canaisDeComunicacao?.franquia}</p>
+                  <p><strong>Franquia alternativa:</strong> {planosVariacoes[index]?.canaisDeComunicacao?.franquiaAlternativa}</p>
+                  <p><strong>Robô de voz:</strong> {planosVariacoes[index]?.canaisDeComunicacao?.roboDeVoz}</p>
                 </div>
-              )}
-
-              <div className="buttonWrapper">
-                <button className="infoButton" onClick={() => handleOpenPopup(planosVariacoes[index])}>
-                  Mais Informações
-                </button>
               </div>
+            )}
+
+            <div className="mt-4 text-center">
+              <button className="bg-buttonGreen text-white py-2 px-4 rounded-md" onClick={() => handleOpenPopup(planosVariacoes[index])}>
+                Mais Informações
+              </button>
             </div>
           </div>
         ))}
       </div>
 
       {popupPlano && (
-        <div className="popup" onClick={handleClosePopup}>
-          <div className="popupContent" onClick={(e) => e.stopPropagation()}>
-            <h2>{popupPlano.nome}</h2>
-            <h4>Benefícios:</h4>
-            <ul>
+        <div className="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50" onClick={handleClosePopup}>
+          <div className="bg-white p-6 rounded-lg w-96" onClick={(e) => e.stopPropagation()}>
+            <h2 className="text-2xl font-semibold mb-4">{popupPlano.nome}</h2>
+            <h4 className="text-lg font-semibold">Benefícios:</h4>
+            <ul className="list-disc ml-6 text-sm mb-4">
               {popupPlano.popupTexto.length > 0 ? (
                 popupPlano.popupTexto.map((beneficio: string, idx: number) => (
                   <li key={idx}>{beneficio}</li>
@@ -229,7 +251,9 @@ const Planos: React.FC = () => {
                 <li>Nenhum benefício disponível.</li>
               )}
             </ul>
-            <button className="infoButton" onClick={handleClosePopup}>Fechar</button>
+            <button className="bg-red-500 text-white py-2 px-4 rounded-md" onClick={handleClosePopup}>
+              Fechar
+            </button>
           </div>
         </div>
       )}
