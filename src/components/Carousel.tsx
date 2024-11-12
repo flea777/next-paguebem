@@ -35,7 +35,7 @@ export default function Carousel() {
       </h2>
 
       <motion.div
-        className="flex space-x-4 max-w-7xl"
+        className="flex space-x-4n max-w-7xl"
         initial={{ x: 0 }}
         animate={{ x: isPaused ? 0 : "-100%" }}
         transition={{ ease: "linear", duration: 25, repeat: Infinity, repeatType: "loop" }}
