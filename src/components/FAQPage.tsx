@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Button, Typography } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, Button} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; 
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline'; 
 import Image from 'next/image';
@@ -14,12 +14,10 @@ const FAQPage: React.FC = () => {
       <div className="flex flex-col items-start w-30p mb-5 basis-30p min-w-64 order-1">
         <div className="flex items-center mb-5 bg-backgroundWhite rounded-20p p-3 gap-2.5">
           <Image src="/simbol_pbb.png" alt='Simbolo Pague Bem Brasil' width={15} height={15}/>
-          <Typography variant="h5" className="font-inter font-bold text-testimonialTitleGreen text-sm">FAQ</Typography>
+          <h5 className="font-inter font-bold text-testimonialTitleGreen text-sm">FAQ</h5>
         </div>
 
-        <Typography variant="h4" className="font-spartan font-bold text-testimonialTitleGreen text-40p mb-5">
-          O que você gostaria de saber sobre a PBB?
-        </Typography>
+        <h4 className="font-spartan font-bold text-testimonialTitleGreen text-40p mb-5">O que você gostaria de saber sobre a PBB?</h4>
 
         <Button
           variant="outlined"
@@ -49,12 +47,10 @@ const FAQPage: React.FC = () => {
 const renderFAQItem = (title: string) => (
   <Accordion className="bg-rectangleGreen rounded-20p p-2 mb-3.5 text-testimonialTitleGreen">
     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-      <Typography className="text-testimonialTitleGreen font-semibold font-inter">{title}</Typography>
+      <h4 className="text-testimonialTitleGreen text-28p font-semibold font-inter">{title}</h4>
     </AccordionSummary>
     <AccordionDetails className="flex flex-col justify-start gap-3">
-      <Typography className="text-testimonialTitleGreen font-spartan">
-        Conteúdo para "{title}". 
-      </Typography>
+      <h4 className="text-testimonialTitleGreen font-spartan">Conteúdo para "{title}"</h4>
       <Link className="font-inter font-bold underline" href="/">Saiba mais</Link>
     </AccordionDetails>
   </Accordion>
