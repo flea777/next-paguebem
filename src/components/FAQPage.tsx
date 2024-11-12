@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable react/no-unescaped-entities */
 
 import React from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Button, Typography } from '@mui/material';
@@ -31,11 +32,11 @@ const FAQPage: React.FC = () => {
       </div>
 
       <div className="flex flex-col order-2 min-h-300p basis-55p mr-14 w-55p">
-        {renderFAQItem("O que é a PBB?", "/sobre-pbb")}
-        {renderFAQItem("Quais são os principais benefícios da plataforma PBB?", "/beneficios")}
-        {renderFAQItem("Como a PBB se diferencia das outras soluções de cobrança do mercado?", "/diferenciais")}
-        {renderFAQItem("Quais são os principais benefícios da plataforma PBB?", "/beneficios")}
-        {renderFAQItem("Como a PBB se diferencia das outras soluções de cobrança do mercado?", "/diferenciais")}
+        {renderFAQItem("O que é a PBB?")}
+        {renderFAQItem("Quais são os principais benefícios da plataforma PBB?")}
+        {renderFAQItem("Como a PBB se diferencia das outras soluções de cobrança do mercado?")}
+        {renderFAQItem("Quais são os principais benefícios da plataforma PBB?")}
+        {renderFAQItem("Como a PBB se diferencia das outras soluções de cobrança do mercado?")}
       </div>
 
       <div className="ml-46n mb-46n mt-0 w-full order-3">
@@ -45,7 +46,7 @@ const FAQPage: React.FC = () => {
   );
 };
 
-const renderFAQItem = (title: string, route: string) => (
+const renderFAQItem = (title: string) => (
   <Accordion className="bg-rectangleGreen rounded-20p p-2 mb-3.5 text-testimonialTitleGreen">
     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
       <Typography className="text-testimonialTitleGreen font-semibold font-inter">{title}</Typography>
