@@ -47,7 +47,7 @@ const FAQPage: React.FC = () => {
 const renderFAQItem = (title: string) => (
   <Accordion className="bg-rectangleGreen rounded-20p p-2 mb-3.5 text-testimonialTitleGreen">
     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-      <h4 className="text-testimonialTitleGreen text-28p font-semibold font-inter">{title}</h4>
+      <h4 className="text-testimonialTitleGreen text-25p font-semibold font-inter">{title}</h4>
     </AccordionSummary>
     <AccordionDetails className="flex flex-col justify-start gap-3">
       <h4 className="text-testimonialTitleGreen font-spartan">Conteúdo para "{title}"</h4>
