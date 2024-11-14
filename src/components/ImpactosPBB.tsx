@@ -15,7 +15,7 @@ const ImpactosPBB: React.FC = () => {
             <i className="bi bi-coin"></i>
           </div>
           <h3 className="text-2xl font-semibold text-[#39670B]">+ R$10 bilhões</h3>
-          <p className="text-lg text-gray-700">em cobranças realizadas</p>
+            <p className="text-lg text-gray-700">em cobranças<br />realizadas</p>
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-6 w-64">
