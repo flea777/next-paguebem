@@ -63,7 +63,6 @@ const testimonials: Testimony[] = [
     }
 ];
 
-
 export default function TestimonialsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   
@@ -81,11 +80,13 @@ export default function TestimonialsCarousel() {
 
   return (
     <div className="w-full bg-backgroundGray" id="testimonial">
-        <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-12 bg-backgroundGray items-center">
-            <h2 className="flex font-spartan text-5xl font-bold text-testimonialTitleGreen">O que nossos clientes andam falando?</h2>
+        <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-12 bg-backgroundGray items-center justify-center">
+            <h2 className="font-spartan text-3xl sm:text-4xl lg:text-5xl font-bold text-testimonialTitleGreen mb-6 text-center sm:text-left">
+                O que nossos clientes andam falando?
+            </h2>
 
-            <div className="relative overflow-hidden">
-                
+            <div className="relative overflow-hidden w-full">
+
                 <AnimatePresence mode="wait">
                 <motion.div
                     key={currentIndex}
@@ -93,28 +94,31 @@ export default function TestimonialsCarousel() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.5 }}
-                    className="flex flex-row items-start space-x-6 p-6 rounded-lg shadow-lg">
+                    className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-x-6 sm:space-y-0 p-6 rounded-lg shadow-lg w-full">
 
-                        <div className="flex flex-col items-center w-1/3 justify-center">
-                            <Image className="rounded-full shadow-custom" 
-                            src={testimonials[currentIndex].imgUrl}
-                            alt={testimonials[currentIndex].name}
-                            width={250} 
-                            height={250}/>
-                            <h2 className="font-inter font-bold text-nameTitleGreen text-2xl mt-5 mx-11 whitespace-nowrap">{testimonials[currentIndex].name}</h2>
-                            <p className="font-inter text-lg text-paragraphBlack mx-11">{testimonials[currentIndex].company}</p>
+                        <div className="flex flex-col items-center w-1/3 justify-center px-4">
+                            <Image
+                              className="rounded-full shadow-custom"
+                              src={testimonials[currentIndex].imgUrl}
+                              alt={testimonials[currentIndex].name}
+                              width={250} 
+                              height={250}
+                              sizes="(max-width: 640px) 300px, 250px" 
+                            />
+                            <h2 className="font-inter font-bold text-nameTitleGreen text-xl sm:text-2xl mt-5 whitespace-nowrap">{testimonials[currentIndex].name}</h2>
+                            <p className="font-inter text-lg sm:text-xl text-paragraphBlack mt-2 text-sm sm:text-base text-center sm:text-left">
+                                {testimonials[currentIndex].company}
+                            </p>
                         </div>
 
-                        <div className="flex flex-col w-2/3 mx-4 gap-12 pb-10">
-                            <p className="font-inter text-2xl leading-10 text-paragraphBlack mt-11">{testimonials[currentIndex].text}</p>
+                        <div className="flex flex-col w-full sm:w-2/3 px-4 gap-6 sm:gap-12 pb-6 sm:pb-10">
+                            <p className="font-inter text-lg sm:text-2xl leading-8 sm:leading-10 text-paragraphBlack">{testimonials[currentIndex].text}</p>
                             <div className="flex justify-center space-x-2 mt-6">
                                 {testimonials.map((_, index) => (
                                     <button
                                     key={index}
                                     onClick={() => handleDotClick(index)}
-                                    className={`flex w-24 h-16 rounded-2xl border bg-white transition-colors duration-300 ${
-                                        index === currentIndex ? 'border-borderGreen' : 'border-borderGray'
-                                    }`}
+                                    className={`flex w-12 sm:w-16 md:w-20 lg:w-24 h-12 sm:h-16 lg:h-16 ${index === currentIndex ? 'border-borderGreen' : 'border-borderGray'} bg-white rounded-2xl border transition-colors duration-300`}
                                     aria-label={`Go to testimonial ${index + 1}`}
                                     />
                                 ))}
@@ -127,4 +131,3 @@ export default function TestimonialsCarousel() {
     </div>
   );
 }
-
