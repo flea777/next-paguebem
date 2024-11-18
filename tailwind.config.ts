@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
-const { fontFamily } = require('tailwindcss/defaultTheme')
-
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const config: Config = {
   content: [
@@ -12,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       margin: {
-        '46n': '-46px'
+        '46n': '-46px',
       },
       minWidth: {
         '300p': '300px',
@@ -57,13 +56,20 @@ const config: Config = {
         hoverGreen: "#4D9D42",
         hoverDarkGreen: "#3D7D35",
         backgroundWhite: "#F0F0F0",
+        darkGreen: "#2f4915",
+        goldenYellow: "#FFC300",
+        white: "#FFFFFF",
       },
       fontFamily: {
         spartan: ['League Spartan', ...fontFamily.sans],
         inter: ['Inter', ...fontFamily.sans],
       },
+      screens: {
+        'xs': '430px',
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

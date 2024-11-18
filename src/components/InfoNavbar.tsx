@@ -32,6 +32,9 @@ export default function InfoNavBar({ textColor = 'text-white', hoverColor = 'hov
           <Link href="/depoimentos" className={`${textColor} ${hoverColor} px-3 py-2 text-sm font-bold`}>
             Depoimentos
           </Link>
+          <Link href="/consultores" className="px-3 py-2 text-sm font-bold text-white">
+                  Consultores
+                </Link>
         </div>
       </section>
 

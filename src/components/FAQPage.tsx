@@ -29,7 +29,7 @@ const FAQPage: React.FC = () => {
         </Button>
       </div>
 
-      <div className="flex flex-col order-2 min-h-300p basis-55p mr-14 w-55p">
+      <div className="flex flex-col order-2 min-h-300p w-full sm:w-55p mr-14">
         {renderFAQItem("O que é a PBB?")}
         {renderFAQItem("Quais são os principais benefícios da plataforma PBB?")}
         {renderFAQItem("Como a PBB se diferencia das outras soluções de cobrança do mercado?")}
