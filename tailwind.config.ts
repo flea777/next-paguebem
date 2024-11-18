@@ -10,11 +10,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      margin: {
+        '46n': '-46px'
+      },
+      minWidth: {
+        '300p': '300px',
+      },
+      fontSize: {
+        '40p': '40px',
+      },
       boxShadow: {
         custom: "4px 4px 4px 0px rgba(0, 0, 0, 0.25)",
       },
+      width: {
+        '30p': '30%',
+        '55p': '55%',
+      },
+      flexBasis: {
+        '30p': '30%',
+        '55p': '55%',
+      },
       backgroundImage: {
         'green-linear-gradient': 'linear-gradient(107.53deg, #2D4416 23.45%, #39670B 97.14%, #5D8D2E 104.87%, #71AA37 104.87%)',
+      },
+      borderRadius: {
+        '20p': '20px',
+        'lg': '0.375rem',
+        'md': '0.25rem',
       },
       colors: {
         background: "var(--background)",
@@ -29,8 +51,12 @@ const config: Config = {
         backgroundGray: "#F6FAF5",
         paragraphBlack: "#1E1E1E",
         borderGreen: "#01AB0D",
+        borderLightGreen: "#4CAF50",
         borderGray: "#C9C9C9",
         socialIconGreen: "#2D4416",
+        hoverGreen: "#4D9D42",
+        hoverDarkGreen: "#3D7D35",
+        backgroundWhite: "#F0F0F0",
         darkGreen: "#2f4915",
         goldenYellow: "#FFC300",
         white: "#FFFFFF",
@@ -47,10 +73,6 @@ const config: Config = {
       },
       borderColor: {
         'gray-300': '#E1E8ED',
-      },
-      borderradius: {
-        'lg': '0.375rem',
-        'md': '0.25rem',
       },
       padding: {
         '8': '2rem',
