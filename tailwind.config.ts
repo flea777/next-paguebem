@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 
 const config: Config = {
   content: [
@@ -35,8 +36,6 @@ const config: Config = {
       },
       borderRadius: {
         '20p': '20px',
-        'lg': '0.375rem',
-        'md': '0.25rem',
       },
       colors: {
         background: "var(--background)",
@@ -65,26 +64,8 @@ const config: Config = {
         spartan: ['League Spartan', ...fontFamily.sans],
         inter: ['Inter', ...fontFamily.sans],
       },
-      spacing: {
-        '96': '24rem',
-      },
-      minHeight: {
-        '38rem': '38rem',
-      },
-      borderColor: {
-        'gray-300': '#E1E8ED',
-      },
-      padding: {
-        '8': '2rem',
-        '5': '1.25rem',
-        '2': '0.5rem',
-      },
-      fontWeight: {
-        'bold': '700',
-      },
     },
   },
   plugins: [],
 };
-
 export default config;
