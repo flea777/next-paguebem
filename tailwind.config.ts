@@ -48,7 +48,7 @@ const config: Config = {
       borderColor: {
         'gray-300': '#E1E8ED',
       },
-      borderRadius: {
+      borderradius: {
         'lg': '0.375rem',
         'md': '0.25rem',
       },
