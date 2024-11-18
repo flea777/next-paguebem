@@ -81,7 +81,7 @@ export default function TestimonialsCarousel() {
   return (
     <div className="w-full bg-backgroundGray" id="testimonial">
         <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-12 bg-backgroundGray items-center justify-center">
-            <h2 className="font-spartan text-3xl sm:text-4xl lg:text-5xl font-bold text-testimonialTitleGreen mb-6 text-center sm:text-left">
+            <h2 className="font-spartan text-3xl sm:text-4xl lg:text-5xl font-bold text-testimonialTitleGreen mb-6 text-center">
                 O que nossos clientes andam falando?
             </h2>
 
@@ -96,7 +96,7 @@ export default function TestimonialsCarousel() {
                     transition={{ duration: 0.5 }}
                     className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-x-6 sm:space-y-0 p-6 rounded-lg shadow-lg w-full">
 
-                        <div className="flex flex-col items-center w-1/3 justify-center px-4">
+                        <div className="flex flex-col items-center w-full sm:w-1/3 justify-center px-4">
                             <Image
                               className="rounded-full shadow-custom"
                               src={testimonials[currentIndex].imgUrl}
@@ -106,13 +106,15 @@ export default function TestimonialsCarousel() {
                               sizes="(max-width: 640px) 300px, 250px" 
                             />
                             <h2 className="font-inter font-bold text-nameTitleGreen text-xl sm:text-2xl mt-5 whitespace-nowrap">{testimonials[currentIndex].name}</h2>
-                            <p className="font-inter text-lg sm:text-xl text-paragraphBlack mt-2 text-sm sm:text-base text-center sm:text-left">
+                            <p className="font-inter text-lg sm:text-xl text-paragraphBlack mt-2 text-sm sm:text-base text-center">
                                 {testimonials[currentIndex].company}
                             </p>
                         </div>
 
                         <div className="flex flex-col w-full sm:w-2/3 px-4 gap-6 sm:gap-12 pb-6 sm:pb-10">
-                            <p className="font-inter text-lg sm:text-2xl leading-8 sm:leading-10 text-paragraphBlack">{testimonials[currentIndex].text}</p>
+                            <p className="font-inter text-lg sm:text-2xl leading-8 sm:leading-10 text-paragraphBlack text-center sm:text-left">
+                                {testimonials[currentIndex].text}
+                            </p>
                             <div className="flex justify-center space-x-2 mt-6">
                                 {testimonials.map((_, index) => (
                                     <button
