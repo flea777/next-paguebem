@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
-const { fontFamily } = require('tailwindcss/defaultTheme')
-
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const config: Config = {
   content: [
@@ -12,13 +11,14 @@ const config: Config = {
   theme: {
     extend: {
       margin: {
-        '46n': '-46px'
+        '46n': '-46px',
       },
       minWidth: {
         '300p': '300px',
       },
       fontSize: {
         '40p': '40px',
+        '28p': '28px',
       },
       boxShadow: {
         custom: "4px 4px 4px 0px rgba(0, 0, 0, 0.25)",
@@ -64,8 +64,12 @@ const config: Config = {
         spartan: ['League Spartan', ...fontFamily.sans],
         inter: ['Inter', ...fontFamily.sans],
       },
+      screens: {
+        'xs': '430px',
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

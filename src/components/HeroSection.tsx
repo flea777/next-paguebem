@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ButtonPrimary from './ButtonPrimary';
 import ButtonSecondary from './ButtonSecondary';
+import Image from 'next/image';
 
 
 export default function HeroSection() {
@@ -59,7 +60,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
             >
-              <img src="/banner.png" alt="Woman with laptop" className="w-4/5 sm:w-3/4 md:w-full" />
+              <Image src="/banner.png" alt="Woman with laptop" className="w-4/5 sm:w-3/4 md:w-full" width={1390} height={1430}/>
 
             </motion.div>
 
