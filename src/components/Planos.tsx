@@ -2,12 +2,33 @@
 
 import React, { useState } from 'react';
 
+interface MeiosPagamento {
+  boleto: string;
+  creditoAVista: string;
+  creditoParcelado: string;
+}
+
+interface CanaisDeComunicacao {
+  franquia: string;
+  franquiaAlternativa: string;
+  roboDeVoz: string;
+}
+
+interface PlanoVariacao {
+  nome: string;
+  preco: string;
+  meiosPagamento: MeiosPagamento;
+  canaisDeComunicacao?: CanaisDeComunicacao;
+  beneficios?: string[];
+  popupTexto: string[];
+}
+
 const Planos: React.FC = () => {
   const [indexLeft, setIndexLeft] = useState(0);
   const [indexRight, setIndexRight] = useState(1);
-  const [popupPlano, setPopupPlano] = useState<any>(null);
+  const [popupPlano, setPopupPlano] = useState<PlanoVariacao | null>(null);
 
-  const planosVariacoes = [
+  const planosVariacoes: PlanoVariacao[] = [
     {
       nome: 'Free',
       preco: 'R$0,00',
@@ -144,7 +165,7 @@ const Planos: React.FC = () => {
   const handleNextRight = () => setIndexRight((indexRight + 1) % planosVariacoes.length);
   const handlePreviousRight = () => setIndexRight((indexRight - 1 + planosVariacoes.length) % planosVariacoes.length);
 
-  const handleOpenPopup = (plano: any) => setPopupPlano(plano);
+  const handleOpenPopup = (plano: PlanoVariacao) => setPopupPlano(plano);
   const handleClosePopup = () => setPopupPlano(null);
 
   return (
@@ -195,24 +216,9 @@ const Planos: React.FC = () => {
                 <div className="mt-4">
                 <h4 className="text-lg font-semibold text-center text-titleGreen">Benefícios do plano Free</h4>
                   <ul className="list-disc ml-6 text-sm">
-                    <li>
-                      <span className="font-bold">WhatsApp:</span> R$0,20 por notificação (pré-pago)
-                    </li>
-                    <li>
-                      <span className="font-bold">Robô de Voz:</span> R$0,75 por ligação (pré-pago)
-                    </li>
-                    <li>
-                      <span className="font-bold">Régua de Cobrança</span> (apenas E-mail)
-                    </li>
-                    <li>
-                      Cobrança de vencidos em até <span className="font-bold">30 dias</span>
-                    </li>
-                    <li>
-                      <span className="font-bold">1 (um)</span> usuário e <span className="font-bold">1 (um)</span> CNPJ
-                    </li>
-                    <li>
-                      <span className="font-bold">6 notificações</span> gratuitas de cobranças via E-mail (por boleto/pix vencido)
-                    </li>
+                    {planosVariacoes[index]?.beneficios?.map((beneficio, idx) => (
+                      <li key={idx}>{beneficio}</li>
+                    ))}
                   </ul>
                 </div>
               </>
@@ -245,7 +251,7 @@ const Planos: React.FC = () => {
             <h4 className="text-lg font-semibold">Benefícios:</h4>
             <ul className="list-disc ml-6 text-sm mb-4">
               {popupPlano.popupTexto.length > 0 ? (
-                popupPlano.popupTexto.map((beneficio: string, idx: number) => (
+                popupPlano.popupTexto.map((beneficio, idx) => (
                   <li key={idx}>{beneficio}</li>
                 ))
               ) : (
