@@ -4,7 +4,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 const ImpactosPBB: React.FC = () => {
   return (
     <section className="bg-[#E6F4E5] py-10 px-4 text-center">
-      <h2 className="text-2xl font-bold text-[#39670B] mb-6">
+      <h2 className="text-2xl font-bold text-testimonialTitleGreen mb-6">
         Transforme sua gestão financeira com a PBB
       </h2>
 
