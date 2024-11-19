@@ -28,7 +28,7 @@ export default function Carousel() {
 
   
   return (
-    <main className="flex flex-col justify-center items-center overflow-hidden mb-12 bg-backgroundGray p-5 gap-5">
+    <main className="flex flex-col justify-center items-center overflow-hidden mb-12 bg-backgroundGray p-5 gap-5" id="carousel">
 
       <h2 className="sm:text-3xl md:text-4xl lg:text-6xl font-inter font-bold text-testimonialTitleGreen mb-4 text-center">
         Empresas que confiam na Pague Bem Brasil

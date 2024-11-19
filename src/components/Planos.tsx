@@ -169,7 +169,7 @@ const Planos: React.FC = () => {
   const handleClosePopup = () => setPopupPlano(null);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8" id="planos">
       <h1 className="text-5xl font-bold text-center mb-8 text-titleGreen">Planos para todas as empresas</h1>
       
       <div className="flex justify-between gap-8">
@@ -252,7 +252,7 @@ const Planos: React.FC = () => {
             <ul className="list-disc ml-6 text-sm mb-4">
               {popupPlano.popupTexto.length > 0 ? (
                 popupPlano.popupTexto.map((beneficio, idx) => (
-                  <li key={idx}>{beneficio}</li>
+                   <li key={idx}>{beneficio}</li>
                 ))
               ) : (
                 <li>Nenhum benefício disponível.</li>

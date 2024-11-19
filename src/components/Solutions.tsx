@@ -23,7 +23,7 @@ const features: Feature[] = [
 
 const Solutions: React.FC = () => {
   return (
-    <div className="flex flex-col space-y-4 p-6">
+    <div className="flex flex-col space-y-4 p-6" id="solucao">
       <h1 className="font-inter text-2xl font-medium text-titleGray">Conheça mais sobre a Pague Bem Brasil</h1>
       <h2 className="font-spartan text-6xl font-bold text-titleGreen">
         Soluções integradas que geram resultados.

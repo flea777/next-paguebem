@@ -1,16 +1,17 @@
-
+import Link from "next/link";
 interface ButtonSecondaryProps {
   text: string;
-  onClick?: () => void;
+  href:string;
 }
 
-export default function ButtonSecondary({ text, onClick }: ButtonSecondaryProps) {
+export default function ButtonSecondary({ text, href }: ButtonSecondaryProps) {
+  const link = href ? href : "/";
   return (
-    <button
+    <Link
       className=" bg-[#FEB700] font-bold text-white px-4 py-2 rounded-full border-none hover:bg-green-600 transition duration-300"
-      onClick={onClick}
+      href={link}
     >
       {text}
-    </button>
+    </Link>
   );
 }
