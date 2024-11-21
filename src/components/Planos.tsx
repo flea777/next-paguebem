@@ -170,9 +170,11 @@ const Planos: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8" id="planos">
-      <h1 className="text-5xl font-bold text-center mb-8 text-titleGreen">Planos para todas as empresas</h1>
+      <h2 className="text-2xl text-center font-bold mb-5 text-testimonialTitleGreen">
+        Planos para todas as empresas
+      </h2>
       
-      <div className="flex justify-between gap-8">
+      <div className="flex flex-col md:flex-row justify-between gap-8">
         {[indexLeft, indexRight].map((index, i) => (
           <div key={i} className="flex-1 bg-white shadow-lg rounded-lg p-6">
             <div className="flex justify-between items-center mb-4">
@@ -181,11 +183,11 @@ const Planos: React.FC = () => {
             </div>
 
             <div className={`flex items-center justify-between ${planosVariacoes[index]?.nome === 'Free' ? 'bg-white' : 'bg-darkGreen'} p-6 rounded-t-lg`}>
-              <h2 className={`text-2xl font-semibold ${planosVariacoes[index]?.nome === 'Free' ? 'text-black' : 'text-white'}`}>
+              <h2 className={`text-xl sm:text-2xl font-semibold ${planosVariacoes[index]?.nome === 'Free' ? 'text-black' : 'text-white'}`}>
                 {planosVariacoes[index]?.nome}
               </h2>
               <div className="text-right">
-                <p className={`text-xl font-bold ${planosVariacoes[index]?.nome === 'Free' ? 'text-black' : 'text-goldenYellow'}`}>
+                <p className={`text-lg sm:text-xl font-bold ${planosVariacoes[index]?.nome === 'Free' ? 'text-black' : 'text-goldenYellow'}`}>
                   {planosVariacoes[index]?.preco}
                 </p>
                 <p className={`text-sm ${planosVariacoes[index]?.nome === 'Free' ? 'text-black' : 'text-white'}`}>Por mês</p>
@@ -214,7 +216,7 @@ const Planos: React.FC = () => {
                 <div className="border-t border-gray-300 my-4"></div>
 
                 <div className="mt-4">
-                <h4 className="text-lg font-semibold text-center text-titleGreen">Benefícios do plano Free</h4>
+                  <h4 className="text-lg font-semibold text-center text-titleGreen">Benefícios do plano Free</h4>
                   <ul className="list-disc ml-6 text-sm">
                     {planosVariacoes[index]?.beneficios?.map((beneficio, idx) => (
                       <li key={idx}>{beneficio}</li>
@@ -246,7 +248,7 @@ const Planos: React.FC = () => {
 
       {popupPlano && (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-50" onClick={handleClosePopup}>
-          <div className="bg-white p-6 rounded-lg w-96" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-white p-6 rounded-lg w-11/12 sm:w-96" onClick={(e) => e.stopPropagation()}>
             <h2 className="text-2xl font-semibold mb-4">{popupPlano.nome}</h2>
             <h4 className="text-lg font-semibold">Benefícios:</h4>
             <ul className="list-disc ml-6 text-sm mb-4">

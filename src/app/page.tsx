@@ -10,7 +10,7 @@ import ImpactosPBB from "../components/ImpactosPBB";
 
 export default function Home() {
   return (
-    <main className="w-full h-screen mx-auto">
+    <main className="w-full h-screen">
       <HeroSection />
       <ImpactosPBB />
       <div />
