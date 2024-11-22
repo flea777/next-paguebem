@@ -10,29 +10,29 @@ const iconConversas = '/icon_pague_bem_conversas.png';
 
 const ProductsSection = () => {
     return(
-          <div className="w-full flex flex-row flex-nowrap mx-auto justify-center gap-6 p-8">
+          <div className="sm:w-full sm:flex sm:flex-row sm:flex-nowrap sm:mx-auto sm:justify-center sm:gap-6 p-8 ">
 
             <div>
                 <Solutions/>
             </div>
 
-            <div className="grid cols-3 gap-6 w-full">
-                <div className="flex justify-center gap-6">
-                  <div className="max-w-80">
+            <div className="md:grid md:cols-3 md:gap-6 md:w-full md:overflow-hidden justify-center">
+                <div className="md:flex md:justify-center md:gap-6 md:overflow-hidden justify-center">
+                  <div className="md:max-w-80 md:overflow-hidden justify-center p-3">
                       <PagueBemCard
                       title="Pague Bem Recupera"
                       description="Ferramenta ideal para empresas resolverem cobranças de forma simples."
                       imgUrl={iconRecupera}/>
                   </div>
 
-                  <div className="max-w-80">
+                  <div className="md:max-w-80 md:overflow-hidden justify-center p-3">
                       <PagueBemCard
                       title="Pague Bem Conta"
                       description="Agilize o pagamento com boleto, PIX ou cartão na hora da cobrança."
                       imgUrl={iconConta}/>
                   </div>
 
-                  <div className="max-w-80">
+                  <div className="md:max-w-80 md:overflow-hidden justify-center p-3">
                       <PagueBemCard
                       title="Pague Bem Protege"
                       description="Rede colaborativa gratuita para pesquisa, publicação e análise de crédito empresarial."
@@ -41,15 +41,15 @@ const ProductsSection = () => {
 
                 </div>
 
-                  <div className="flex justify-center gap-12">
-                    <div className="max-w-80">
+                  <div className="md:flex md:justify-center md:gap-12 md:overflow-hidden">
+                    <div className="md:max-w-80 md:overflow-hidden justify-center p-3">
                         <PagueBemCard
                         title="Pague Bem Localize"
                         description="Facilite o pagamento da dívida com boleto, PIX ou cartão no momento da cobrança."
                         imgUrl={iconLocalize}/>
                     </div>
 
-                    <div className="max-w-80">
+                    <div className="md:max-w-80 md:overflow-hidden justify-center p-3">
                         <PagueBemCard
                         title="Pague Bem Conversas"
                         description="Converta inadimplentes em pagantes com conversas diretas via WhatsApp."
