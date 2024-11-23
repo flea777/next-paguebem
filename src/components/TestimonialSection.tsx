@@ -112,7 +112,7 @@ export default function TestimonialsCarousel() {
                         </div>
 
                         <div className="flex flex-col w-full sm:w-2/3 px-4 gap-6 sm:gap-12 pb-6 sm:pb-10">
-                            <p className="font-inter text-lg sm:text-2xl leading-8 sm:leading-10 text-paragraphBlack text-center sm:text-left" style={{ height: '180px', overflow: 'hidden' }}>
+                            <p className="font-inter text-lg sm:text-2xl leading-8 sm:leading-10 text-paragraphBlack text-center sm:text-left" style={{ height: '200px', overflow: 'hidden' }}>
                                 {testimonials[currentIndex].text}
                             </p>
                             <div className="flex justify-center space-x-2 mt-12">
@@ -133,4 +133,3 @@ export default function TestimonialsCarousel() {
     </div>
   );
 }
-
