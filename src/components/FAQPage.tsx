@@ -2,9 +2,9 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Button} from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; 
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline'; 
+import { Accordion, AccordionSummary, AccordionDetails, Button } from '@mui/material';
+import { MdExpandMore } from "react-icons/md";
+import { MdOutlineChatBubbleOutline } from "react-icons/md";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,7 +13,7 @@ const FAQPage: React.FC = () => {
     <div className="flex flex-wrap justify-between p-11 bg-white font-spartan mt-7">
       <div className="flex flex-col items-start w-30p mb-5 basis-30p min-w-64 order-1">
         <div className="flex items-center mb-5 bg-backgroundWhite rounded-20p p-3 gap-2.5">
-          <Image src="/simbol_pbb.png" alt='Simbolo Pague Bem Brasil' width={15} height={15}/>
+          <Image src="/simbol_pbb.png" alt='Simbolo Pague Bem Brasil' width={15} height={15} />
           <h5 className="font-inter font-bold text-testimonialTitleGreen text-sm">FAQ</h5>
         </div>
 
@@ -22,8 +22,8 @@ const FAQPage: React.FC = () => {
         <Button
           variant="outlined"
           color="primary"
-          startIcon={<ChatBubbleOutlineIcon />}
-          className="font-bold text-testimonialTitleGreen text-base border-borderLightGreen mt-2.5 py-3 px-6 rounded-20p h-12"  
+          startIcon={<MdOutlineChatBubbleOutline size={20} />}
+          className="font-bold text-testimonialTitleGreen text-base border-borderLightGreen mt-2.5 py-3 px-6 rounded-20p h-12"
           onClick={() => alert("Redirecionando para a página de contato...")}>
           FALE CONOSCO
         </Button>
@@ -46,11 +46,11 @@ const FAQPage: React.FC = () => {
 
 const renderFAQItem = (title: string) => (
   <Accordion className="bg-rectangleGreen rounded-20p p-2 mb-3.5 text-testimonialTitleGreen">
-    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+    <AccordionSummary expandIcon={<MdExpandMore size={20} color="green" />}>
       <h4 className="text-testimonialTitleGreen text-25p font-semibold font-inter">{title}</h4>
     </AccordionSummary>
     <AccordionDetails className="flex flex-col justify-start gap-3">
-      <h4 className="text-testimonialTitleGreen font-spartan">Conteúdo para "{title}"</h4>
+      <h4 className="text-testimonialTitleGreen font-spartan">Conteúdo para &quot;{title}&quot;</h4>
       <Link className="font-inter font-bold underline" href="/">Saiba mais</Link>
     </AccordionDetails>
   </Accordion>
