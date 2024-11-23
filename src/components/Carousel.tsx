@@ -28,9 +28,9 @@ export default function Carousel() {
 
   
   return (
-    <main className="flex flex-col justify-center items-center overflow-hidden mb-12 bg-backgroundGray p-5 gap-5">
+    <main className="flex flex-col justify-center items-center overflow-hidden mb-12 bg-backgroundGray p-5 gap-5" id="carousel">
 
-      <h2 className="sm:text-3xl md:text-4xl lg:text-6xl font-inter font-bold text-testimonialTitleGreen mb-4 text-center">
+      <h2 className="text-2xl text-center font-bold mb-5 text-testimonialTitleGreen">
         Empresas que confiam na Pague Bem Brasil
       </h2>
 
@@ -60,8 +60,8 @@ export default function Carousel() {
       </section>
         ))}
       </motion.div>
-      <div className="flex items-center font-inter w-72 h-14">
-      <ButtonPrimary text="FALAR COM CONSULTOR" href="/consultores"/>
+      <div className="flex justify-center items-center w-full mt-6">
+      <ButtonPrimary text="FALAR COM CONSULTOR" href="/consultores" className="w-full sm:w-auto"/>
       </div>
     </main>
   );

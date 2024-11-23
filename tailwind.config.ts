@@ -56,6 +56,9 @@ const config: Config = {
         hoverGreen: "#4D9D42",
         hoverDarkGreen: "#3D7D35",
         backgroundWhite: "#F0F0F0",
+        darkGreen: "#2f4915",
+        goldenYellow: "#FFC300",
+        white: "#FFFFFF",
       },
       fontFamily: {
         spartan: ['League Spartan', ...fontFamily.sans],
