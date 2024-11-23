@@ -16,7 +16,7 @@ const testimonials: Testimony[] = [
         id: 1,
         name: 'Álvaro Leal',
         company: 'Pague Bem Brasil',
-        text: 'Estou extremamente satisfeito com a Pague Bem Brasil! O serviço é eficiente, e a praticidade de pagar boletos com taxas menores fez toda a diferença nas minhas finanças. A plataforma é fácil de usar e o atendimento ao cliente sempre me ajudou prontamente. Recomendo a todos que buscam uma solução ágil e econômica para pagamentos.',
+        text: 'Estou muito satisfeito com a Pague Bem Brasil! O serviço é eficiente, as taxas são menores e facilitam minhas finanças. A plataforma é fácil de usar e o atendimento é excelente. Recomendo para quem busca uma solução ágil e econômica.',
         imgUrl: '/icon_testimonialSection_alvaro_leal.jpeg'
     },
     {
@@ -112,10 +112,10 @@ export default function TestimonialsCarousel() {
                         </div>
 
                         <div className="flex flex-col w-full sm:w-2/3 px-4 gap-6 sm:gap-12 pb-6 sm:pb-10">
-                            <p className="font-inter text-lg sm:text-2xl leading-8 sm:leading-10 text-paragraphBlack text-center sm:text-left">
+                            <p className="font-inter text-lg sm:text-2xl leading-8 sm:leading-10 text-paragraphBlack text-center sm:text-left" style={{ height: '180px', overflow: 'hidden' }}>
                                 {testimonials[currentIndex].text}
                             </p>
-                            <div className="flex justify-center space-x-2 mt-6">
+                            <div className="flex justify-center space-x-2 mt-12">
                                 {testimonials.map((_, index) => (
                                     <button
                                     key={index}
@@ -133,3 +133,4 @@ export default function TestimonialsCarousel() {
     </div>
   );
 }
+
