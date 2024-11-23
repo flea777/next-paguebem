@@ -4,7 +4,6 @@ import React from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Button } from '@mui/material';
 import { MdExpandMore, MdOutlineChatBubbleOutline } from "react-icons/md";
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 const FAQPage: React.FC = () => {
@@ -34,7 +33,7 @@ const FAQPage: React.FC = () => {
       </div>
 
       <div className="flex flex-col order-2 min-h-300p w-full sm:w-55p mr-[13.5]">
-        {renderFAQItem("O que é a PBB?")}
+        {renderFAQItem("O que é a Pague Bem Brasil?")}
         {renderFAQItem("Quais são os principais benefícios da plataforma Pague Bem Brasil?")}
         {renderFAQItem("Como a Pague Bem Brasil se diferencia das outras soluções de cobrança do mercado?")}
         {renderFAQItem("Quais são os principais benefícios da plataforma Pague Bem Brasil?")}
@@ -55,9 +54,6 @@ const renderFAQItem = (title: string) => (
     </AccordionSummary>
     <AccordionDetails className="flex flex-col justify-start gap-3">
       <h4 className="text-testimonialTitleGreen font-spartan">Conteúdo para &quot;{title}&quot;</h4>
-      <Link className="font-inter font-bold underline" href="/">
-        Saiba mais
-      </Link>
     </AccordionDetails>
   </Accordion>
 );
