@@ -64,72 +64,72 @@ const testimonials: Testimony[] = [
 ];
 
 export default function TestimonialsCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 10000);
+    const [currentIndex, setCurrentIndex] = useState(0);
     
-    return () => clearInterval(timer);
-  }, []);
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+        }, 10000);
+        
+        return () => clearInterval(timer);
+    }, []);
 
-  const handleDotClick = (index: number) => {
-    setCurrentIndex(index);
-  };
+    const handleDotClick = (index: number) => {
+        setCurrentIndex(index);
+    };
 
-  return (
-    <div className="w-full bg-backgroundGray" id="testimonial">
-        <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-12 bg-backgroundGray items-center justify-center">
-            <h2 className="font-spartan text-3xl sm:text-4xl lg:text-5xl font-bold text-testimonialTitleGreen mb-6 text-center">
-                O que nossos clientes andam falando?
-            </h2>
+    return (
+        <div className="w-full bg-backgroundGray overflow-hidden" id="testimonial">
+            <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-12 bg-backgroundGray items-center justify-center">
+                <h2 className="font-spartan text-3xl sm:text-4xl lg:text-5xl font-bold text-testimonialTitleGreen mb-6 text-center overflow-hidden">
+                    O que nossos clientes andam falando? 
+                </h2>
 
-            <div className="relative overflow-hidden w-full">
+                <div className="relative overflow-hidden w-full">
 
-                <AnimatePresence mode="wait">
-                <motion.div
-                    key={currentIndex}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.5 }}
-                    className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-x-6 sm:space-y-0 p-6 rounded-lg shadow-lg w-full">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currentIndex}
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -100 }}
+                            transition={{ duration: 0.5 }}
+                            className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-x-6 sm:space-y-0 p-6 rounded-lg shadow-lg w-full overflow-hidden">
 
-                        <div className="flex flex-col items-center w-full sm:w-1/3 justify-center px-4">
-                            <Image
-                              className="rounded-full shadow-custom"
-                              src={testimonials[currentIndex].imgUrl}
-                              alt={testimonials[currentIndex].name}
-                              width={250} 
-                              height={250}
-                              sizes="(max-width: 640px) 300px, 250px" 
-                            />
-                            <h2 className="font-inter font-bold text-nameTitleGreen text-xl sm:text-2xl mt-5 whitespace-nowrap">{testimonials[currentIndex].name}</h2>
-                            <p className="font-inter text-lg sm:text-xl text-paragraphBlack mt-2 text-sm sm:text-base text-center">
-                                {testimonials[currentIndex].company}
-                            </p>
-                        </div>
-
-                        <div className="flex flex-col w-full sm:w-2/3 px-4 gap-6 sm:gap-12 pb-6 sm:pb-10">
-                            <p className="font-inter text-lg sm:text-2xl leading-8 sm:leading-10 text-paragraphBlack text-center sm:text-left" style={{ height: '200px', overflow: 'hidden' }}>
-                                {testimonials[currentIndex].text}
-                            </p>
-                            <div className="flex justify-center space-x-2 mt-12">
-                                {testimonials.map((_, index) => (
-                                    <button
-                                    key={index}
-                                    onClick={() => handleDotClick(index)}
-                                    className={`flex w-12 sm:w-16 md:w-20 lg:w-24 h-12 sm:h-16 lg:h-16 ${index === currentIndex ? 'border-borderGreen' : 'border-borderGray'} bg-white rounded-2xl border transition-colors duration-300`}
-                                    aria-label={`Go to testimonial ${index + 1}`}
-                                    />
-                                ))}
+                            <div className="flex flex-col items-center w-full sm:w-1/3 justify-center px-4">
+                                <Image
+                                    className="rounded-full shadow-custom"
+                                    src={testimonials[currentIndex].imgUrl}
+                                    alt={testimonials[currentIndex].name}
+                                    width={250} 
+                                    height={250}
+                                    sizes="(max-width: 640px) 300px, 250px" 
+                                />
+                                <h2 className="font-inter font-bold text-nameTitleGreen text-xl sm:text-2xl mt-5 whitespace-nowrap">{testimonials[currentIndex].name}</h2>
+                                <p className="font-inter text-lg sm:text-xl text-paragraphBlack mt-2 text-sm sm:text-base text-center">
+                                    {testimonials[currentIndex].company}
+                                </p>
                             </div>
-                        </div>
-                </motion.div>
-                </AnimatePresence>
+
+                            <div className="flex flex-col w-full sm:w-2/3 px-4 gap-6 sm:gap-12 pb-6 sm:pb-10">
+                                <p className="font-inter text-lg sm:text-2xl leading-8 sm:leading-10 text-paragraphBlack text-center sm:text-left overflow-hidden">
+                                    {testimonials[currentIndex].text}
+                                </p>
+                                <div className="flex justify-center space-x-2 mt-12">
+                                    {testimonials.map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => handleDotClick(index)}
+                                            className={`flex w-12 sm:w-16 md:w-20 lg:w-24 h-12 sm:h-16 lg:h-16 ${index === currentIndex ? 'border-borderGreen' : 'border-borderGray'} bg-white rounded-2xl border transition-colors duration-300`}
+                                            aria-label={`Go to testimonial ${index + 1}`}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
             </div>
         </div>
-    </div>
-  );
+    );
 }

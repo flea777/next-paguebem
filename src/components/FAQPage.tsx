@@ -10,14 +10,14 @@ const FAQPage: React.FC = () => {
   const router = useRouter();
 
   return (
-    <div className="flex flex-wrap justify-between p-11 bg-white font-spartan mt-7">
+    <div className="flex flex-wrap justify-between p-11 bg-white font-spartan mt-7 overflow-hidden">
       <div className="flex flex-col items-start w-30p mb-5 basis-30p min-w-64 order-1">
-        <div className="flex items-center mb-5 bg-backgroundWhite rounded-20p p-3 gap-2.5">
+        <div className="flex items-center mb-5 bg-backgroundWhite rounded-20p p-3 gap-2.5 overflow-hidden">
           <Image src="/simbol_pbb.png" alt="Simbolo Pague Bem Brasil" width={15} height={15} />
           <h5 className="font-inter font-bold text-testimonialTitleGreen text-sm">FAQ</h5>
         </div>
 
-        <h4 className="font-spartan font-bold text-testimonialTitleGreen text-40p mb-5 tracking-tight sm:text-36p xs:text-28p lg:text-40p xl:text-50p">
+        <h4 className="font-spartan font-bold text-testimonialTitleGreen text-40p mb-5 tracking-tight sm:text-36p xs:text-28p lg:text-40p xl:text-50p overflow-hidden">
           O que você gostaria de saber sobre a Pague Bem Brasil?
         </h4>
 
@@ -25,14 +25,14 @@ const FAQPage: React.FC = () => {
           variant="outlined"
           color="primary"
           startIcon={<MdOutlineChatBubbleOutline size={20} />}
-          className="font-bold text-testimonialTitleGreen text-base border-borderLightGreen mt-2.5 py-3 px-6 rounded-20p h-12"
+          className="font-bold text-testimonialTitleGreen text-base border-borderLightGreen mt-2.5 py-3 px-6 rounded-20p h-12 overflow-hidden"
           onClick={() => router.push('/consultores')}
         >
           FALE CONOSCO
         </Button>
       </div>
 
-      <div className="flex flex-col order-2 min-h-300p w-full sm:w-55p mr-[13.5]">
+      <div className="flex flex-col order-2 min-h-300p w-full sm:w-55p mr-[13.5] overflow-hidden">
         {renderFAQItem("O que é a Pague Bem Brasil?")}
         {renderFAQItem("Quais são os principais benefícios da plataforma Pague Bem Brasil?")}
         {renderFAQItem("Como a Pague Bem Brasil se diferencia das outras soluções de cobrança do mercado?")}
@@ -40,7 +40,7 @@ const FAQPage: React.FC = () => {
         {renderFAQItem("Outras dúvidas sobre a Pague Bem Brasil?")}
       </div>
 
-      <div className="ml-46n mb-46n mt-0 w-full order-3">
+      <div className="ml-46n mb-46n mt-0 w-full order-3 overflow-hidden">
         <Image src="/Grafismo_verde_bandeira.png" alt="Imagem decorativa" width={200} height={100} />
       </div>
     </div>
@@ -48,11 +48,11 @@ const FAQPage: React.FC = () => {
 };
 
 const renderFAQItem = (title: string) => (
-  <Accordion className="bg-rectangleGreen rounded-20p p-2 mb-3.5 text-testimonialTitleGreen">
+  <Accordion className="bg-rectangleGreen rounded-20p p-2 mb-3.5 text-testimonialTitleGreen overflow-hidden">
     <AccordionSummary expandIcon={<MdExpandMore size={20} color="green" />}>
       <h4 className="text-testimonialTitleGreen text-25p font-semibold font-inter">{title}</h4>
     </AccordionSummary>
-    <AccordionDetails className="flex flex-col justify-start gap-3">
+    <AccordionDetails className="flex flex-col justify-start gap-3 overflow-hidden">
       <h4 className="text-testimonialTitleGreen font-spartan">Conteúdo para &quot;{title}&quot;</h4>
     </AccordionDetails>
   </Accordion>
