@@ -44,9 +44,9 @@ export default function Carousel() {
         }}
         transition={{
           ease: "linear",
-          duration: isPaused ? 60 : 4800, // A duração foi aumentada para 4800 segundos, mantendo a velocidade contínua
+          duration: 2400, // Velocidade constante para o movimento de ida
           repeat: Infinity, // O loop será infinito, fazendo o movimento contínuo
-          repeatType: "reverse", // Faz o movimento de ida e volta, mantendo a mesma velocidade
+          repeatType: "reverse", // Faz o movimento de ida e volta
         }}
         whileHover={{ scale: 1.1 }}
       >
