@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface Feature {
@@ -23,30 +22,34 @@ const features: Feature[] = [
 
 const Solutions: React.FC = () => {
   return (
-    <div className="flex flex-col space-y-4 p-6" id="solucao">
-      <h1 className="font-inter text-2xl font-medium text-titleGray">Conheça mais sobre a Pague Bem Brasil</h1>
-      <h2 className="font-spartan text-6xl font-bold text-titleGreen">
+    <div className="flex flex-col space-y-6 p-6 overflow-hidden" id="solucao">
+      <h1 className="font-inter text-2xl font-medium text-titleGray">
+        Conheça mais sobre a Pague Bem Brasil
+      </h1>
+      <h2 className="font-spartan text-5xl font-bold text-titleGreen leading-tight overflow-hidden">
         Soluções integradas que geram resultados.
       </h2>
-      <p className="font-inter text-lg font-regular text-textGray">
+      <p className="font-inter text-base text-textGray leading-relaxed">
         Revolucione sua gestão financeira com a Pague Bem Brasil:
       </p>
       
-      <ul className="list-disc pl-6">
+      <ul className="space-y-3">
         {features.map((feature) => (
-          <li key={feature.id} className="mb-3">
-            <p className="font-inter text-lg font-regular text-sm text-textGray">
-              {feature.text}
-            </p>
+          <li
+            key={feature.id}
+            className="flex items-start space-x-2 text-textGray text-base font-inter"
+          >
+            <span className="w-2 h-2 bg-black rounded-full mt-2"></span>
+            <p>{feature.text}</p>
           </li>
         ))}
       </ul>
 
-      <p className="font-inter text-lg font-regular text-sm text-textGray">
+      <p className="font-inter text-base text-textGray leading-relaxed">
         Entre em contato hoje mesmo e descubra como a Pague Bem Brasil pode transformar sua gestão financeira, sem complicações.
       </p>
       
-      <button className="justify-start max-w-72 mt-4 bg-buttonGreen text-white py-2 px-4 rounded-2xl hover:bg-green-700">
+      <button className="bg-buttonGreen text-white py-2 px-6 rounded-2xl hover:bg-green-700 self-start text-base font-bold tracking-wide">
         Zerar Inadimplência
       </button>
     </div>

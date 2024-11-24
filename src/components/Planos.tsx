@@ -170,13 +170,13 @@ const Planos: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8" id="planos">
-      <h2 className="text-2xl text-center font-bold mb-5 text-testimonialTitleGreen">
+      <h2 className="text-4xl text-center font-bold mb-5 text-testimonialTitleGreen">
         Planos para todas as empresas
       </h2>
       
       <div className="flex flex-col md:flex-row justify-between gap-8">
         {[indexLeft, indexRight].map((index, i) => (
-          <div key={i} className="flex-1 bg-white shadow-lg rounded-lg p-6">
+          <div key={i} className="flex-1 bg-white border-2 border-gray-200 shadow-lg rounded-3xl p-6">
             <div className="flex justify-between items-center mb-4">
               <button className="bg-gray-200 p-2 rounded-full" onClick={i === 0 ? handlePreviousLeft : handlePreviousRight}>←</button>
               <button className="bg-gray-200 p-2 rounded-full" onClick={i === 0 ? handleNextLeft : handleNextRight}>→</button>

@@ -19,7 +19,7 @@ const ProductsSection = () => {
             <div className="grid cols-3 gap-6 w-full">
                 <div className="flex justify-center gap-6">
                   <div className="max-w-80">
-                      <PagueBemCard
+                      <PagueBemCard 
                       title="Pague Bem Recupera"
                       description="Ferramenta ideal para empresas resolverem cobranças de forma simples."
                       imgUrl={iconRecupera}/>

@@ -14,9 +14,9 @@ export default function Home() {
       <HeroSection />
       <ImpactosPBB />
       <div />
+      <ProductsSection />
       <Carousel />
       <Planos />
-      <ProductsSection />
       <TestimonialSection />
       <FAQPage />
       <Footer />
