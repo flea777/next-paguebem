@@ -26,7 +26,10 @@ const Solutions: React.FC = () => {
 
       <ul className="space-y-3">
         {features.map((feature) => (
-          <li key={feature.id} className="flex items-start space-x-2 text-textGray text-sm sm:text-base md:text-lg font-inter">
+          <li
+            key={feature.id}
+            className="flex items-start space-x-2 text-textGray text-sm sm:text-base md:text-lg font-inter"
+          >
             <span className="w-2 h-2 bg-black rounded-full mt-2"></span>
             <p>{feature.text}</p>
           </li>
@@ -37,9 +40,13 @@ const Solutions: React.FC = () => {
         Entre em contato hoje mesmo e descubra como a Pague Bem Brasil pode transformar sua gestão financeira, sem complicações.
       </p>
 
-      <button className="bg-buttonGreen text-white py-2 px-4 sm:py-3 sm:px-6 rounded-2xl hover:bg-green-700 mx-auto text-sm sm:text-base md:text-lg font-bold tracking-wide">
+      {/* Botão com redirecionamento */}
+      <a
+        href="/consultores"
+        className="bg-buttonGreen text-white py-2 px-4 sm:py-3 sm:px-6 rounded-2xl hover:bg-green-700 mx-auto text-sm sm:text-base md:text-lg font-bold tracking-wide text-center"
+      >
         Zerar Inadimplência
-      </button>
+      </a>
     </div>
   );
 };

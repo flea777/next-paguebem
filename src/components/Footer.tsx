@@ -47,9 +47,9 @@ export default function Footer() {
             </Link>
           </li>
           <li>
+            {/* Link redirecionando para a página de consultores */}
             <Link
-              href="/fale-com-getuliao"
-              target="_blank"
+              href="/consultores"
               className="font-spartan text-titleGreen hover:text-hoverGreen transition-colors font-bold"
             >
               Falar com um consultor
@@ -94,3 +94,4 @@ export default function Footer() {
     </footer>
   );
 }
+

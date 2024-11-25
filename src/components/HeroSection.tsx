@@ -51,7 +51,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <Image src="/banner.png" alt="Woman with laptop" className="w-4/5 sm:w-3/4 md:w-full" width={1390} height={1430}/>
+          <Image src="/banner.png" alt="Woman with laptop" className="w-4/5 sm:w-3/4 md:w-full mt-10" width={1390} height={1430}/>
         </motion.div>
       </section>
     </main>
