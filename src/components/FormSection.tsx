@@ -10,26 +10,20 @@ const FormSection: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col bg-backgroungGray px-4 sm:px-6 lg:px-8 z-">
+    <section className="flex flex-col bg-backgroundGray px-4 sm:px-6 lg:px-8">
       
-      <div        style={{
-          backgroundImage: 'greenLinearGradient',          height: '200px'
-        }}>
+      <div className="bg-gradient-to-r from-[#2D4416] to-[#39670B] h-[150px] w-full mt-[80px] flex justify-center items-center overflow-hidden">
+  <div className="flex flex-col w-full max-w-screen-xl text-center px-4 h-full justify-center">
+  <p className="text-[24px] sm:text-[32px] lg:text-[44px] font-spartan font-bold leading-[1.4] text-white mt-2 mb-2">
+      Fale com nossos consultores
+    </p>
+    <p className="text-[14px] sm:text-[18px] lg:text-[22px] font-spartan font-normal leading-[1.4] text-white">
+      Converse conosco e tire suas dúvidas
+    </p>
+  </div>
+</div>
 
-
-        <div className="flex flex-col w-full max-w-screen-xl text-center">
-          <h2 className="text-[32px] sm:text-[40px] lg:text-[60px] font-spartan font-bold leading-tight text-white">
-            Fale com nossos consultores
-          </h2>
-
-          <p className="text-[18px] sm:text-[22px] lg:text-[26px] font-inter font-normal leading-tight text-white">
-            Converse conosco e tire suas dúvidas
-          </p>
-        </div>
-
-      </div>
-
-      <div className="flex justify-center bg-backgroundGraydGray p-6 sm:p-12 lg:p-20">
+      <div className="flex justify-center bg-backgroundGray p-6 sm:p-12 lg:p-20">
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-[936px]" onSubmit={handleSubmit}>
           <div>
             <label className="block text-[20px] sm:text-[24px] lg:text-[26px] font-inter font-semibold text-titleGray pl-3">

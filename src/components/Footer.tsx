@@ -26,11 +26,6 @@ export default function Footer() {
           </li>
           <li>
             <Link href="/fale-com-getuliao" target="_blank" className="font-spartan text-titleGreen hover:text-hoverGreen transition-colors font-bold">
-              Contato
-            </Link>
-          </li>
-          <li>
-            <Link href="/fale-com-getuliao" target="_blank" className="font-spartan text-titleGreen hover:text-hoverGreen transition-colors font-bold">
               Falar com um consultor
             </Link>
           </li>
@@ -43,7 +38,7 @@ export default function Footer() {
 
         <p className="font-spartan text-sm text-gray-600 mt-2">Pague Bem Brasil | 21.052.740/0001-19</p>
 
-        <div className='flex gap-1'>
+        <div className='flex gap-4 mt-4'>
           
           <Link href="https://instagram.com" target="_blank" className="text-hoverGreen hover:text-hoverDarkGreen transition-colors rounded-full border border-hoverGreen p-1">
             <FaInstagram size={20} />

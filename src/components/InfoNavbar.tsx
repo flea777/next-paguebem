@@ -29,7 +29,7 @@ export default function InfoNavBar({ textColor = 'text-white', hoverColor = 'hov
       <section className={`flex ${isOpen ? 'flex-col' : 'space-x-4'} items-center`}>
         {/* Soluções */}
         <ScrollLink
-          to="solucao"
+          to="ProductSection"
           smooth={true}
           duration={800}
           offset={-70} // Ajusta para considerar headers fixos
@@ -41,7 +41,7 @@ export default function InfoNavBar({ textColor = 'text-white', hoverColor = 'hov
 
         {/* Planos */}
         <ScrollLink
-          to="planos"
+          to="Planos"
           smooth={true}
           duration={800}
           offset={-70}
@@ -53,7 +53,7 @@ export default function InfoNavBar({ textColor = 'text-white', hoverColor = 'hov
 
         {/* Depoimentos */}
         <ScrollLink
-          to="testimonial"
+          to="TestimonialSection"
           smooth={true}
           duration={800}
           offset={-70}
