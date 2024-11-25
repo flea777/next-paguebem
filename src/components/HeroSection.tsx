@@ -1,12 +1,36 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ButtonPrimary from './ButtonPrimary';
 import ButtonSecondary from './ButtonSecondary';
 import Image from 'next/image';
 
 export default function HeroSection() {
+  useEffect(() => {
+    const handleSmoothScroll = (event: MouseEvent) => {
+      const target = (event.target as HTMLAnchorElement).getAttribute('href');
+      if (target?.startsWith('#')) {
+        event.preventDefault();
+        const element = document.querySelector(target);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Agora estamos garantindo que o "anchor" seja do tipo HTMLAnchorElement
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      (anchor as HTMLAnchorElement).addEventListener('click', handleSmoothScroll);
+    });
+
+    return () => {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        (anchor as HTMLAnchorElement).removeEventListener('click', handleSmoothScroll);
+      });
+    };
+  }, []);
+
   return (
     <main className="bg-gradient-to-r from-[#2D4416] via-[#39670B] to-[#71AA37] flex flex-col items-center p-5">
       <section className="w-full h-full flex flex-col md:flex-row items-center justify-between px-4 mt-10">
@@ -57,3 +81,4 @@ export default function HeroSection() {
     </main>
   );
 }
+
