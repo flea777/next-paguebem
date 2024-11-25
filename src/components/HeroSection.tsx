@@ -26,22 +26,22 @@ export default function HeroSection() {
           </motion.h1>
 
           <motion.p 
-            className="text-lg md:text-xl mb-6 text-center md:text-left"
+            className="text-lg md:text-xl mb-6 text-center md:text-left w-full max-w-2xl break-words"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <strong>Automatizamos</strong> o seu setor de cobrança, apoiamos o seu cliente em toda a <strong>Jornada de Pagamento</strong> e reduzimos a sua inadimplência.
+            <strong className="text-xl md:text-2xl">Automatizamos</strong> o seu setor de cobrança, apoiamos o seu cliente em toda a <strong className="text-xl md:text-2xl">Jornada de Pagamento</strong> e reduzimos a sua inadimplência.
           </motion.p>
 
           <motion.div 
-            className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
+            className="group flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <ButtonPrimary text="FALAR COM CONSULTOR" href="/consultores" className="w-full sm:w-auto" />
-            <ButtonSecondary text="CONHECER OS PLANOS" href='' className="w-full sm:w-auto" />
+            <ButtonPrimary text="FALAR COM CONSULTOR" href="/consultores" className="w-full sm:w-auto group-hover:scale-110 transition-transform duration-300" />
+            <ButtonSecondary text="CONHECER OS PLANOS" href='' className="w-full sm:w-auto group-hover:scale-100 transition-transform duration-300" />
           </motion.div>
         </motion.div>
         

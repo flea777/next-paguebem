@@ -10,7 +10,7 @@ const iconConversas = '/icon_pague_bem_conversas.png';
 
 const ProductsSection = () => {
   return (
-    <div className="w-full flex flex-col lg:flex-row mx-auto justify-center gap-4 p-6">
+    <div id="solucao" className="w-full flex flex-col lg:flex-row mx-auto justify-center gap-4 p-6">
       <div className="w-full lg:w-[40%]">
         <Solutions />
       </div>

@@ -21,11 +21,6 @@ export default function Footer() {
           </li>
           <li>
             <Link href="" target="_blank" className="font-spartan text-titleGreen hover:text-hoverGreen transition-colors font-bold">
-              Quem somos
-            </Link>
-          </li>
-          <li>
-            <Link href="" target="_blank" className="font-spartan text-titleGreen hover:text-hoverGreen transition-colors font-bold">
               Depoimentos
             </Link>
           </li>

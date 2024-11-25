@@ -27,7 +27,6 @@ export default function Carousel() {
     { id: 10, name: 'Senac', imgUrl: '/senac.png' },
   ];
 
-  // Criando 50 cópias das imagens
   const extendedCompanies = Array(50).fill(companies).flat();
 
   return (
@@ -40,31 +39,30 @@ export default function Carousel() {
         className="flex gap-4"
         initial={{ x: 0 }}
         animate={{
-          x: isPaused ? 0 : "-100%", // Animação contínua de rolagem para a esquerda
+          x: isPaused ? 0 : "-100%",
         }}
         transition={{
           ease: "linear",
-          duration: 2400, // Velocidade constante para o movimento de ida
-          repeat: Infinity, // O loop será infinito, fazendo o movimento contínuo
-          repeatType: "reverse", // Faz o movimento de ida e volta
+          duration: 2400,
+          repeat: Infinity,
+          repeatType: "reverse",
         }}
         whileHover={{ scale: 1.1 }}
       >
-        {/* Carrossel que se move de forma contínua */}
         <div className="flex gap-4">
           {extendedCompanies.map((company, index) => (
             <section
               key={company.id + index}
               className="rounded-lg p-4 w-64 h-40 flex-shrink-0 flex flex-col items-center justify-center"
-              onMouseEnter={() => setIsPaused(true)} // Pausa o carrossel ao passar o mouse
-              onMouseLeave={() => setIsPaused(false)} // Retorna a rolagem ao retirar o mouse
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
             >
               <div className="relative w-full h-full">
                 <Image
                   src={company.imgUrl}
                   alt={`Logo ${company.name}`}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  style={{ objectFit: 'contain' }}
                   priority
                 />
               </div>
