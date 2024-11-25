@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -41,7 +41,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <ButtonPrimary text="FALAR COM CONSULTOR" href="/consultores" className="w-full sm:w-auto group-hover:scale-110 transition-transform duration-300" />
-            <ButtonSecondary text="CONHECER OS PLANOS" href='' className="w-full sm:w-auto group-hover:scale-100 transition-transform duration-300" />
+            <ButtonSecondary text="CONHECER OS PLANOS" href="#planos" className="w-full sm:w-auto group-hover:scale-100 transition-transform duration-300" />
           </motion.div>
         </motion.div>
         
@@ -55,5 +55,5 @@ export default function HeroSection() {
         </motion.div>
       </section>
     </main>
-  )
-};
+  );
+}
