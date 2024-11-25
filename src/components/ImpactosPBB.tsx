@@ -5,7 +5,7 @@ const ImpactosPBB: React.FC = () => {
   return (
     <section className="bg-[#E6F4E5] py-10 px-4 text-center">
       <h2 className="text-2xl font-bold text-testimonialTitleGreen mb-6">
-        Transforme sua gestão financeira com a PBB
+        Transforme sua gestão financeira com a Pague Bem Brasil
       </h2>
 
       <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">

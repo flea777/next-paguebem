@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ButtonPrimary from "./ButtonPrimary";
+import { useRouter } from 'next/navigation';  // Importando o useRouter
 
 interface Companies {
   id: number;
@@ -13,6 +13,7 @@ interface Companies {
 
 export default function Carousel() {
   const [isPaused, setIsPaused] = useState(false);
+  const router = useRouter();  // Usando o router para navegação
 
   const companies: Companies[] = [
     { id: 1, name: 'Cardeal', imgUrl: '/cardeal.png' },
@@ -28,6 +29,11 @@ export default function Carousel() {
   ];
 
   const extendedCompanies = Array(50).fill(companies).flat();
+
+  // Função para navegar para a página de consultores
+  const handleConsultorClick = () => {
+    router.push('/consultores');
+  };
 
   return (
     <main className="flex flex-col justify-center items-center overflow-hidden mb-12 bg-backgroundGray p-5 gap-5" id="carousel">
@@ -72,7 +78,13 @@ export default function Carousel() {
       </motion.div>
 
       <div className="flex justify-center items-center w-full mt-6">
-        <ButtonPrimary text="FALAR COM CONSULTOR" href="/consultores" className="w-full sm:w-auto" />
+        {/* Usando a função handleConsultorClick para redirecionar */}
+        <button
+          onClick={handleConsultorClick}
+          className="px-4 py-2 text-white font-bold bg-[#01AB0D] rounded-3xl border-none hover:bg-green-600 transform hover:scale-100 transition-all duration-300 ease-in-out w-full sm:w-auto"
+        >
+          FALAR COM CONSULTOR
+        </button>
       </div>
     </main>
   );
