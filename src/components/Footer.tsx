@@ -16,6 +16,11 @@ export default function Footer() {
           </li>
           <li>
             <Link href="" target="_blank" className="font-spartan text-titleGreen hover:text-hoverGreen transition-colors font-bold">
+              Soluções
+            </Link>
+          </li>
+           <li>
+            <Link href="" target="_blank" className="font-spartan text-titleGreen hover:text-hoverGreen transition-colors font-bold">
               Planos
             </Link>
           </li>
