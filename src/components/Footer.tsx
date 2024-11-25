@@ -1,4 +1,3 @@
-import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
