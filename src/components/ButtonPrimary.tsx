@@ -13,7 +13,7 @@ interface ButtonPrimaryProps {
 
 export default function ButtonPrimary({ text, href, className }: ButtonPrimaryProps) {
   const link = href ? href : "/";
-  const buttonClass = `px-4 py-2 text-white font-bold bg-[#01AB0D] rounded-3xl border-none hover:bg-green-600 transform hover:scale-110 transition-all duration-300 ease-in-out ${className}`;
+  const buttonClass = `px-4 py-2 text-white font-bold bg-[#01AB0D] rounded-3xl border-none hover:bg-green-600 transform hover:scale-100 transition-all duration-300 ease-in-out ${className}`;
 
   return (
     <Link href={link}>
